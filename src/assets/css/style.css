@@ -1340,7 +1340,7 @@ p {
 }
 
 .DetailArt .History {
-  padding: 250px 0px;
+  padding: 250px 0px 50px 0px;
   color: white;
   width: 20%;
   margin: auto;
@@ -1398,5 +1398,19 @@ p {
 @media screen and (max-width: 560px) {
   .DetailArt .History {
     width: 80%;
+  }
+}
+
+.DetailArt .ExploreArt .TitreAndFilter h2 {
+  width: 70%;
+}
+
+@media screen and (max-width: 560px) {
+  .DetailArt .ExploreArt .TitreAndFilter {
+    display: block;
+    text-align: center;
+  }
+  .DetailArt .ExploreArt .TitreAndFilter h2 {
+    width: 100%;
   }
 }
