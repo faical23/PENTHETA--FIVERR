@@ -538,6 +538,7 @@ p {
   text-transform: capitalize;
   font-feature-settings: 'pnum' on, 'lnum' on;
   font-family: 'Montserrat-Bold';
+  width: 50%;
 }
 
 .home .Hero .container-fluid .Hero__Content p {
@@ -949,7 +950,7 @@ p {
 
 @media screen and (max-width: 560px) {
   .home .ExploreArt .TitreAndFilter h2 {
-    font-size: 25px;
+    font-size: 18px;
   }
   .home .ExploreArt .TitreAndFilter .Filter button {
     padding: 6px 20px;
@@ -1166,9 +1167,69 @@ p {
   }
 }
 
-h1 {
-  font-family: 'Montserrat-Bold';
+.Explore .Hero .container-fluid .Hero__Content {
+  width: 100%;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.Explore .Hero .container-fluid .Hero__Content h1 {
+  width: 100% !important;
+}
+
+.Explore .Hero .container-fluid .Hero__Content .SearchInput {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 50px auto 150px auto !important;
+}
+
+.Explore .Hero .container-fluid .Hero__Content .SearchInput input {
+  width: 80%;
+  padding: 20px  10px;
+  border-radius: 8px;
+}
+
+.Explore .Hero .container-fluid .Hero__Content .SearchInput ::placeholder {
+  font-size: 20px;
+}
+
+.Explore .Hero .container-fluid .Hero__Content .SearchInput button {
+  padding: 15px 50px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
   font-weight: bold;
-  font-size: 64px;
-  width: 50%;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.Explore .Hero .container-fluid .Hero__Content .SearchInput button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+@media screen and (max-width: 1024px) {
+  .Explore .Hero .container-fluid .Hero__Content .SearchInput input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Explore .Hero .container-fluid .Hero__Content .SearchInput {
+    display: block;
+  }
+  .Explore .Hero .container-fluid .Hero__Content .SearchInput input {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+.NTFs .MyNTFs {
+  padding-top: 200px;
 }

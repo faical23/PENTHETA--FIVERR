@@ -1,0 +1,66 @@
+.Explore{
+    .Hero{
+        .container-fluid{
+            .Hero__Content{
+                width: 100%;
+                display: block;
+                width: 100%;
+                margin-top: 50px;
+                h1{
+                    width: 100% !important;
+                }
+                .SearchInput{
+                    width: 100%;
+                    display: flex;
+                    align-items:center;
+                    margin: 50px auto 150px auto !important;
+                    
+                    input{
+                        width: 80%;
+                        padding: 20px  10px;
+                        border-radius: 8px;
+                    }
+                    ::placeholder{
+                        font-size:20px;
+                    }
+                    button{
+                        padding: 15px 50px;
+                        background: $Primary-100;
+                        border-radius: 8px;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 32px;
+                        font-family: 'Montserrat-Bold';
+                        font-size: 16px;
+                        margin-left: 20px;
+                        &:hover{
+                            background-color:transparent !important;
+                            border: 1px solid $Primary-100;
+                            color: $Primary-100;
+                        }
+                    }
+    
+                }
+                @media screen and (max-width: 1024px) {
+                    .SearchInput{                     
+                        input{
+                            width: 70%;
+                        }
+                    }
+            }
+            @media screen and (max-width: 768px) {
+                .SearchInput{    
+                    display: block;                 
+                    input{
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+                }
+        }
+
+            }
+        }
+
+    }
+}

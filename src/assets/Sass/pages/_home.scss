@@ -20,6 +20,7 @@
                     text-transform: capitalize;
                     font-feature-settings: 'pnum' on, 'lnum' on;
                     font-family: 'Montserrat-Bold';
+                    width: 50%;
                 }
                 p{
                     font-style: normal;
@@ -407,7 +408,7 @@
         @media screen and (max-width: 560px) {
             .TitreAndFilter{
                 h2{
-                font-size:25px
+                font-size:18px
                 }
                 .Filter{
                     button{
