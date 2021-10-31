@@ -130,6 +130,9 @@
             .container-fluid{
                 display: block;
                 text-align: center;
+                h1{
+                    width: 100% !important;
+                }
                 .Hero__Content{
                     width: 100%;
                     p{

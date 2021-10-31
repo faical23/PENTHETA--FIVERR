@@ -12,7 +12,7 @@
             </div>
               <div class="ExploreArt__Card">
                   <div class="row">
-                    <div  v-for="Explore,n in NewCrypto" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div  v-for="Explore,n in MyNTFS" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                       <div class="Card">
                               <img :src="Explore.ImgCover" alt="">
                               <div class="AvatarName">
@@ -21,19 +21,35 @@
                               </div>
                               <h3>{{Explore.TitreCard}}</h3>
                               <div class="BuyAndPrice">
-                                    <button>Buy</button>
-                                    <div class="Price">
-                                        <h6>Price</h6>
-                                        <h4>{{Explore.Price}} TFuel</h4>
-                                    </div>
-
+                                    <button>Sell</button>
                               </div>
                         </div>
                     </div>
                   </div>  
               </div>
     </div>
-
+    <div class="ExploreArt MyNTFsOnSale">
+            <div class="TitreAndFilter">
+                <h2>My NFTs on sale</h2>
+            </div>
+              <div class="ExploreArt__Card">
+                  <div class="row">
+                    <div  v-for="Explore,n in MyNTFsOnSale" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                      <div class="Card">
+                              <img :src="Explore.ImgCover" alt="">
+                              <div class="AvatarName">
+                                  <img :src="Explore.ImgAvatar" alt="">
+                                  <span>{{Explore.AvatarName}}</span>
+                              </div>
+                              <h3>{{Explore.TitreCard}}</h3>
+                              <div class="BuyAndPrice">
+                                    <button>Cancel</button>
+                              </div>
+                        </div>
+                    </div>
+                  </div>  
+              </div>
+    </div>
     <Myfooter/>
   </div>
 </template>
@@ -46,7 +62,7 @@ export default {
   data() {      
     return{
 
-        NewCrypto:[ 
+        MyNTFS:[ 
          {
             ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
@@ -95,65 +111,55 @@ export default {
             Price:'100'
           },
         ],
-        NewArtist:[
+        MyNTFsOnSale:[ 
+         {
+            ImgCover:require('../assets/Img/CardImg.png'),
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            AvatarName:'Yerikho Christian',
+            TitreCard:'Inner State : Joy',
+            Price:'100'
+          },
           {
+                        ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-            AvatarName:'Arlene McCoy',
-            Price:'214.22'
+                        AvatarName:'Rudolf Basna',
+
+            TitreCard:'Sequences Scene',
+            Price:'100'
           },
-                    {
+          {
+                        ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Darlene Robertson',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Marvin McKinney',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Albert Flores',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Brooklyn Simmons',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Devon Lane',
-            Price:'214.22'
+                        AvatarName:'Antoni Djomabala',
+
+            TitreCard:'Birdy Birdy Birdy',
+            Price:'100'
           },
-          ////////////////////////////////  
-            {
+          {
+                        ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
+                        AvatarName:'Sintya Marley',
+
+            TitreCard:'Dope Wised',
+            Price:'100'
           },
-                    {
+          {
+                        ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
-          },          {
+                        AvatarName:'Jack Hammer',
+
+            TitreCard:'Preset Presence',
+            Price:'100'
+          },
+          {
+                        ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
-          },          {
-            ImgAvatar:require('../assets/Img/Avatar.png'),
-             AvatarName:'Lorem lorem',
-            Price:'214.22'
-          }
+                        AvatarName:'Roy Ricardo',
+
+            TitreCard:'namarizonia',
+            Price:'100'
+          },
         ],
-        StartNumberRecentlySoldShow:0,
-        EndNumberRecentlySoldShow:3,
-        StartPopular:0,
-        EndPopular:6,
 
     }
   },
@@ -162,20 +168,6 @@ export default {
   },
   methods:{
 
-    ShowNewRNewArtist(Condition){
-    if(Condition == "Next"){
-        if(!(this.EndPopular >= this.NewArtist.length)){
-            this.StartPopular +=6
-            this.EndPopular +=6
-        }
-      }
-      else{
-        if(this.StartPopular != 0){
-            this.StartPopular -=6
-            this.EndPopular -=6
-        }
-      }
-    }
   }
 
 }

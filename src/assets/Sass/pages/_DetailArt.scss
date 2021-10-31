@@ -1,0 +1,135 @@
+.DetailArt{
+    background-color: $Primary-200;
+    .Hero{
+        .container-fluid{
+            padding: 100px 100px 0px 100px;
+            position: relative;
+            top: 120px;
+            .BigImg{
+                width: 30%;
+                border-bottom-right-radius:30px ;
+                box-shadow: 1px 1px 0px 26px rgba(255, 255, 255, 0.2)
+            }
+            .Hero__Content{
+                width: 50% ;
+                position: relative;
+                left: 50px;
+                h1{
+                    width: 70% ;
+                }
+                h6{
+                    padding: 10px 0px !important;
+                    font-size:20px;
+                }
+                p{
+                    width: 70% ;
+                }
+                .AvatarName{
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 30px;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+                .Price{
+                    h1{
+                        font-size:40px;
+                        width: 100% !important;
+                    }
+                }
+                button{
+                    padding: 10px 50px !important;
+                }
+                
+            }
+        }
+        @media screen and (max-width: 1440px) {
+            .BigImg{
+                width: 40% !important;
+            }
+            .Hero__Content{
+                h1{
+                    width: 100% !important;
+                }
+                p{
+                    width: 100% !important
+                }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .container-fluid{
+                padding: 100px 20px 30px 20px;
+                top: 150px;
+                .Hero__Content{
+                    left: 0px !important;
+                }
+            }
+
+
+        }
+        @media screen and (max-width: 768px) 
+        {
+            .container-fluid{
+                padding: 200px 20px 0px 20px !important;
+                top: 0px !important;
+                .BigImg{
+                    width: 100% !important;
+                }
+                .Hero__Content{
+                    width: 100% !important;
+                    text-align: center !important;
+                    padding-top: 100px;
+                    .AvatarName{
+                        justify-content: center !important
+                    }
+                }
+            }
+
+        }
+    }
+    .History{
+        padding: 250px 0px;
+        color: white;
+        width: 20%;
+        margin: auto;
+        h1{
+            padding: 30px 0px;
+        }
+        .Single__History{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin: 40px 0px;
+            h4{
+                padding-bottom: 10px;
+                font-size:22px;
+            }
+            img{
+                margin-right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+            p{
+                line-height:30px;
+            }
+            span{
+                color: $Primary-100;
+            }
+        }
+        @media screen and (max-width: 1440px) {
+            width:25%;
+        }
+        @media screen and (max-width: 1024px) {
+            width:35%;
+        }
+        @media screen and (max-width: 768px) {
+            padding: 100px 0px;
+            width:45%;
+        }
+        @media screen and (max-width: 560px) {
+            width:80%;
+        }
+    }
+
+}

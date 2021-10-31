@@ -658,6 +658,9 @@ p {
     display: block;
     text-align: center;
   }
+  .home .Hero .container-fluid h1 {
+    width: 100% !important;
+  }
   .home .Hero .container-fluid .Hero__Content {
     width: 100%;
   }
@@ -1232,4 +1235,168 @@ p {
 
 .NTFs .MyNTFs {
   padding-top: 200px;
+}
+
+.NTFs .MyNTFs .BuyAndPrice, .NTFs .MyNTFsOnSale .BuyAndPrice {
+  justify-content: center !important;
+}
+
+.NTFs .MyNTFs .BuyAndPrice button, .NTFs .MyNTFsOnSale .BuyAndPrice button {
+  padding: 6px 50px !important;
+}
+
+.DetailArt {
+  background-color: #1C1C1C;
+}
+
+.DetailArt .Hero .container-fluid {
+  padding: 100px 100px 0px 100px;
+  position: relative;
+  top: 120px;
+}
+
+.DetailArt .Hero .container-fluid .BigImg {
+  width: 30%;
+  border-bottom-right-radius: 30px;
+  box-shadow: 1px 1px 0px 26px rgba(255, 255, 255, 0.2);
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content {
+  width: 50%;
+  position: relative;
+  left: 50px;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content h1 {
+  width: 70%;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content h6 {
+  padding: 10px 0px !important;
+  font-size: 20px;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content p {
+  width: 70%;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content .AvatarName {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content .AvatarName img {
+  margin-right: 10px;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content .Price h1 {
+  font-size: 40px;
+  width: 100% !important;
+}
+
+.DetailArt .Hero .container-fluid .Hero__Content button {
+  padding: 10px 50px !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .DetailArt .Hero .BigImg {
+    width: 40% !important;
+  }
+  .DetailArt .Hero .Hero__Content h1 {
+    width: 100% !important;
+  }
+  .DetailArt .Hero .Hero__Content p {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .DetailArt .Hero .container-fluid {
+    padding: 100px 20px 30px 20px;
+    top: 150px;
+  }
+  .DetailArt .Hero .container-fluid .Hero__Content {
+    left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .DetailArt .Hero .container-fluid {
+    padding: 200px 20px 0px 20px !important;
+    top: 0px !important;
+  }
+  .DetailArt .Hero .container-fluid .BigImg {
+    width: 100% !important;
+  }
+  .DetailArt .Hero .container-fluid .Hero__Content {
+    width: 100% !important;
+    text-align: center !important;
+    padding-top: 100px;
+  }
+  .DetailArt .Hero .container-fluid .Hero__Content .AvatarName {
+    justify-content: center !important;
+  }
+}
+
+.DetailArt .History {
+  padding: 250px 0px;
+  color: white;
+  width: 20%;
+  margin: auto;
+}
+
+.DetailArt .History h1 {
+  padding: 30px 0px;
+}
+
+.DetailArt .History .Single__History {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 40px 0px;
+}
+
+.DetailArt .History .Single__History h4 {
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.DetailArt .History .Single__History img {
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.DetailArt .History .Single__History p {
+  line-height: 30px;
+}
+
+.DetailArt .History .Single__History span {
+  color: #18E5E7;
+}
+
+@media screen and (max-width: 1440px) {
+  .DetailArt .History {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .DetailArt .History {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .DetailArt .History {
+    padding: 100px 0px;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .DetailArt .History {
+    width: 80%;
+  }
 }

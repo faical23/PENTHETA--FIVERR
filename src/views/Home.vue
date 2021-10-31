@@ -17,7 +17,7 @@
                 <div class="BuyAndPrice">
                     <button>Buy</button>
                     <div class="Price">
-                        <h6>Price</h6>
+                        <h6>Price:</h6>
                         <h4>100 TFuel</h4>
                     </div>
 
@@ -75,7 +75,7 @@
                               <div class="BuyAndPrice">
                                     <button>Buy</button>
                                     <div class="Price">
-                                        <h6>Price</h6>
+                                        <h6>Price:</h6>
                                         <h4>{{Explore.Price}} TFuel</h4>
                                     </div>
 

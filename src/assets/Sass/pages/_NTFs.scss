@@ -2,4 +2,12 @@
     .MyNTFs{
         padding-top:200px;
     }
+    .MyNTFs,.MyNTFsOnSale{
+        .BuyAndPrice{
+            justify-content:center !important;
+            button{
+                padding: 6px 50px !important;
+            }
+        }
+    }
 }
