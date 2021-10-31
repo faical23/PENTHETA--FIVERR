@@ -1,0 +1,28 @@
+// 1 - Utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// 2 - Vendors;
+
+// 3 - Base;
+@import "base/reset";
+@import "base/typography";
+
+// 4 - layout
+
+@import "layout/navbar";
+@import "layout/footer";
+
+// 5 - componenets;
+
+
+// 6 - Pages
+@import "pages/home";
+@import "pages/Connexion";
+
+h1{
+    font-family: 'Montserrat-Bold';
+    font-weight:bold;
+    font-size: 64px;
+    width: 50%;
+}

@@ -1,0 +1,171 @@
+.home{
+
+    .Hero{
+        .container-fluid{
+            padding: 200px 100px 0px 100px;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex;
+            color: $white;
+            width:95%;
+            margin: 0px auto;
+            .Hero__Content{
+                width:70%;
+                h1{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 64px;
+                    line-height: 88px;
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    font-family: 'Montserrat-Bold';
+                }
+                p{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-family: 'Montserrat-Regular';
+                    padding: 30px 0px;
+                    width: 50%;
+                }
+                button{
+                    padding: 12px 36px;
+                    background: $Primary-100;
+                    border-radius: 8px;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 16px;
+                    margin: 40px 0px;
+                    &:hover{
+                        background-color:transparent !important;
+                        border: 1px solid $Primary-100;
+                        color: $Primary-100;
+                    }
+                }
+            }
+            .Hero__Img{
+                padding: 20px;
+                background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: blur(80px);
+                border-bottom-right-radius: 30px;
+                position: relative;
+                right:40px;
+                top:100px;
+                .AvatarName{
+                    padding: 20px 0px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+                h3{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 44px;
+                    line-height: 64px;
+                    font-family: 'Montserrat-Bold';
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: $Primary-100;
+                    width:80%;
+                }
+                .BuyAndPrice{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 20px 0px;
+                    width:80%;
+                    h6{
+                        padding-bottom: 5px;
+                    }
+                    button{
+                        padding: 6px 35px;
+                        background: $Primary-100;
+                        border-radius: 8px;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 32px;
+                        font-family: 'Montserrat-Bold';
+                        font-size: 16px;
+                        &:hover{
+                            background-color:transparent !important;
+                            border: 1px solid $Primary-100;
+                            color: $Primary-100;
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1440px) {
+            .Hero__Content{
+                h1{
+                    width: 100%;
+                }
+            }
+            .Hero__Img{
+                right:0px;
+                h3{
+                    width: 100% !important;
+                }
+                .BuyAndPrice{
+                    width: 100% !important;
+                }
+            }
+
+        }
+        @media screen and (max-width: 1024px) {
+            .container-fluid{
+                padding: 200px 20px 30px 20px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .container-fluid{
+                display: block;
+                text-align: center;
+                .Hero__Content{
+                    width: 100%;
+                    p{
+                        width: 100%;
+                    }
+                }
+                .Hero__Img{
+                    width: 70%;
+                    right:0px;
+                    top: 0px;
+                    margin: 30px auto;
+                }
+            }
+        }
+        @media screen and (max-width: 560px) {
+            .container-fluid{
+                display: block;
+                text-align: center;
+                .Hero__Content{
+                    h1{
+                        font-size:40px !important;
+                        width:100%;
+                        line-height:60px;
+                    }
+                }
+                .Hero__Img{
+                    width: 100%;
+                    h3{
+                        font-size:30px !important;
+                    }
+                }
+            }
+        }
+
+    }
+    .RecentlySold{
+        padding-top:150px ;
+        background-color: red;
+    }
+}

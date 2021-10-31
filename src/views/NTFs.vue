@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-      this is home NTFS page
+      <h1>this is home NTFS page</h1>
   </div>
 </template>
 

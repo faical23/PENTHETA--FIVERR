@@ -1,34 +1,73 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Explore">Explore</router-link> |
-      <router-link to="/DetailArt">Detail Art</router-link> |
-      <router-link to="/NTFs">NTFs</router-link>
+    <div class="Navbar">
+      <div v-if="BurgerWork" class="NavbarMobileCobtent">
+            <ul>
+              <li><router-link to="/">Home</router-link>  </li>
+              <li><router-link to="/Explore">Explore</router-link> </li>
+              <!-- <li><router-link to="/DetailArt">Detail Art</router-link> </li> -->
+              <li><router-link to="/NTFs">My NFTs</router-link> </li>
+              <button>Connect Wallet</button>
+            </ul>
+      </div>
+      <div class="container-fluid">
+        <div class="DescktopNavbar">
+          <div class="LeftNavbar">
+            <ul>
+              <li><router-link to="/"><img src="./assets/Img/Logo.png" alt=""></router-link> </li>
+              <li><router-link to="/">Home</router-link>  </li>
+              <li><router-link to="/Explore">Explore</router-link> </li>
+              <!-- <li><router-link to="/DetailArt">Detail Art</router-link> </li> -->
+              <li><router-link to="/NTFs">My NFTs</router-link> </li>
+            </ul>
+          </div>
+          <div class="RightNavbar">
+              <button>Connect Wallet</button>
+          </div>
+        </div>
+        <div  class="MobileNavbar">
+          <ul>
+            <li><router-link to="/"><img src="./assets/Img/Logo.png" alt=""></router-link> </li>
+            <li>
+              <div class="BurgerMenu" @click="OpenNavbarMobile">
+                <span :class=" BurgerWork ? 'Burger_1' : '' "></span>
+                <span :class=" BurgerWork ? 'Burger_2' : '' "></span>
+                <span :class=" BurgerWork ? 'Burger_3' : '' "></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
+export default {
+  name: "features",
+  data() {
+    return {
+        BurgerWork:false,
+    };
+  },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  methods: {
+    OpenNavbarMobile(){
+      this.BurgerWork ? this.BurgerWork =  false : this.BurgerWork = true;
+      console.log(this.BurgerWork)
     }
+  },
+  mounted() {
   }
-}
+};
+</script>
+<style lang="scss">
+ @import 'assets/css/style.css';
 </style>
+
+

@@ -1,0 +1,697 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  line-height: 100%;
+  overflow-x: hidden;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  font-weight: 700;
+  margin: 0px;
+}
+
+p {
+  margin: 0px !important;
+}
+
+i {
+  vertical-align: middle;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:focus,
+a:visited:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover,
+a:visited:active,
+a:visited:hover {
+  outline: 0;
+}
+
+input,
+textarea:focus {
+  outline: 0;
+}
+
+button:focus {
+  cursor: pointer;
+  outline: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  padding: 0px;
+}
+
+/**
+* Remove most spacing between table cells.
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  max-width: 100%;
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  object-fit: cover;
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+p {
+  margin: 0;
+}
+
+/*=== Import Fonts ===*/
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+/*=== Typography Styling ===*/
+* {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.Navbar {
+  padding: 60px 100px;
+  position: absolute;
+  width: 100%;
+}
+
+.Navbar .container-fluid .DescktopNavbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.Navbar .container-fluid .DescktopNavbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar .container-fluid .DescktopNavbar ul li a {
+  padding-right: 50px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: 'Montserrat-SemiBold';
+  color: #FFFFFF !important;
+}
+
+.Navbar .container-fluid .DescktopNavbar ul li a:hover {
+  color: #18E5E7 !important;
+}
+
+.Navbar .container-fluid .DescktopNavbar ul li .router-link-exact-active {
+  color: #18E5E7 !important;
+}
+
+.Navbar .container-fluid .DescktopNavbar .RightNavbar button {
+  padding: 12px 36px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+}
+
+.Navbar .container-fluid .DescktopNavbar .RightNavbar button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+.Navbar .container-fluid .MobileNavbar {
+  position: relative;
+  z-index: 100;
+  display: none;
+}
+
+.Navbar .container-fluid .MobileNavbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar .container-fluid .MobileNavbar ul .BurgerMenu span {
+  width: 70px;
+  height: 7px;
+  background-color: #18E5E7;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-left: auto !important;
+}
+
+.Navbar .container-fluid .MobileNavbar ul .BurgerMenu .Burger_1 {
+  width: 30px;
+}
+
+.Navbar .container-fluid .MobileNavbar ul .BurgerMenu .Burger_2 {
+  width: 50px;
+}
+
+.Navbar .NavbarMobileCobtent {
+  background-color: #141516 !important;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.Navbar .NavbarMobileCobtent ul {
+  padding: 150px 0px;
+}
+
+.Navbar .NavbarMobileCobtent ul li {
+  padding-bottom: 50px;
+}
+
+.Navbar .NavbarMobileCobtent ul li a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+  font-family: 'Montserrat-SemiBold';
+  color: #FFFFFF !important;
+}
+
+.Navbar .NavbarMobileCobtent ul li a:hover {
+  color: #18E5E7 !important;
+}
+
+.Navbar .NavbarMobileCobtent ul li .router-link-exact-active {
+  color: #18E5E7 !important;
+}
+
+.Navbar .NavbarMobileCobtent ul button {
+  padding: 12px 36px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+}
+
+.Navbar .NavbarMobileCobtent ul button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+@media screen and (max-width: 1024px) {
+  .Navbar {
+    padding: 60px 0px;
+  }
+  .Navbar .RightNavbar button {
+    padding: 10px 25px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Navbar .DescktopNavbar {
+    display: none !important;
+  }
+  .Navbar .MobileNavbar {
+    display: grid !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .Navbar {
+    padding: 30px 0px;
+  }
+  .Navbar .MobileNavbar ul img {
+    width: 80%;
+  }
+  .Navbar .MobileNavbar ul .BurgerMenu span {
+    width: 45px !important;
+    height: 6px;
+  }
+  .Navbar .MobileNavbar ul .BurgerMenu .Burger_1 {
+    width: 15px !important;
+  }
+  .Navbar .MobileNavbar ul .BurgerMenu .Burger_2 {
+    width: 25px !important;
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 60px 100px;
+  color: white;
+  border-top: 2px solid #18E5E7;
+}
+
+.footer .Footer_Content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer .Footer_Content .LogoAndDescription {
+  width: 30%;
+}
+
+.footer .Footer_Content .LogoAndDescription p {
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  width: 50%;
+  padding: 30px 0px;
+  line-height: 35px;
+}
+
+.footer .Footer_Content .AboutUs, .footer .Footer_Content .Comunity, .footer .Footer_Content .SocielMedia {
+  width: 20%;
+}
+
+.footer .Footer_Content .AboutUs h6, .footer .Footer_Content .Comunity h6, .footer .Footer_Content .SocielMedia h6 {
+  padding-right: 50px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: 'Montserrat-SemiBold';
+  color: #FFFFFF !important;
+}
+
+.footer .Footer_Content .AboutUs li, .footer .Footer_Content .Comunity li, .footer .Footer_Content .SocielMedia li {
+  padding-bottom: 20px;
+}
+
+.footer .Footer_Content .AboutUs li a, .footer .Footer_Content .Comunity li a, .footer .Footer_Content .SocielMedia li a {
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.footer .Footer_Content .AboutUs li a:hover, .footer .Footer_Content .Comunity li a:hover, .footer .Footer_Content .SocielMedia li a:hover {
+  color: #18E5E7;
+}
+
+.footer .Footer_Copyrigh p {
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer .LogoAndDescription p {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 60px 20px;
+  }
+  .footer .LogoAndDescription {
+    width: 25%;
+  }
+  .footer .LogoAndDescription p {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer p {
+    text-align: center;
+  }
+  .footer .Footer_Content {
+    display: block;
+    text-align: center;
+  }
+  .footer .Footer_Content .LogoAndDescription, .footer .Footer_Content .AboutUs, .footer .Footer_Content .Comunity, .footer .Footer_Content .SocielMedia {
+    width: 100%;
+  }
+  .footer .Footer_Content .LogoAndDescription p, .footer .Footer_Content .AboutUs p, .footer .Footer_Content .Comunity p, .footer .Footer_Content .SocielMedia p {
+    width: 100% !important;
+  }
+  .footer .Footer_Content .LogoAndDescription h6, .footer .Footer_Content .AboutUs h6, .footer .Footer_Content .Comunity h6, .footer .Footer_Content .SocielMedia h6 {
+    padding-right: 0px !important;
+  }
+}
+
+.home .Hero .container-fluid {
+  padding: 200px 100px 0px 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex;
+  color: #FFFFFF;
+  width: 95%;
+  margin: 0px auto;
+}
+
+.home .Hero .container-fluid .Hero__Content {
+  width: 70%;
+}
+
+.home .Hero .container-fluid .Hero__Content h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 88px;
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-family: 'Montserrat-Bold';
+}
+
+.home .Hero .container-fluid .Hero__Content p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Montserrat-Regular';
+  padding: 30px 0px;
+  width: 50%;
+}
+
+.home .Hero .container-fluid .Hero__Content button {
+  padding: 12px 36px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+  margin: 40px 0px;
+}
+
+.home .Hero .container-fluid .Hero__Content button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+.home .Hero .container-fluid .Hero__Img {
+  padding: 20px;
+  background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(80px);
+  border-bottom-right-radius: 30px;
+  position: relative;
+  right: 40px;
+  top: 100px;
+}
+
+.home .Hero .container-fluid .Hero__Img .AvatarName {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.home .Hero .container-fluid .Hero__Img .AvatarName img {
+  margin-right: 10px;
+}
+
+.home .Hero .container-fluid .Hero__Img h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 64px;
+  font-family: 'Montserrat-Bold';
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #18E5E7;
+  width: 80%;
+}
+
+.home .Hero .container-fluid .Hero__Img .BuyAndPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  width: 80%;
+}
+
+.home .Hero .container-fluid .Hero__Img .BuyAndPrice h6 {
+  padding-bottom: 5px;
+}
+
+.home .Hero .container-fluid .Hero__Img .BuyAndPrice button {
+  padding: 6px 35px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+}
+
+.home .Hero .container-fluid .Hero__Img .BuyAndPrice button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+@media screen and (max-width: 1440px) {
+  .home .Hero .Hero__Content h1 {
+    width: 100%;
+  }
+  .home .Hero .Hero__Img {
+    right: 0px;
+  }
+  .home .Hero .Hero__Img h3 {
+    width: 100% !important;
+  }
+  .home .Hero .Hero__Img .BuyAndPrice {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home .Hero .container-fluid {
+    padding: 200px 20px 30px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home .Hero .container-fluid {
+    display: block;
+    text-align: center;
+  }
+  .home .Hero .container-fluid .Hero__Content {
+    width: 100%;
+  }
+  .home .Hero .container-fluid .Hero__Content p {
+    width: 100%;
+  }
+  .home .Hero .container-fluid .Hero__Img {
+    width: 70%;
+    right: 0px;
+    top: 0px;
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .home .Hero .container-fluid {
+    display: block;
+    text-align: center;
+  }
+  .home .Hero .container-fluid .Hero__Content h1 {
+    font-size: 40px !important;
+    width: 100%;
+    line-height: 60px;
+  }
+  .home .Hero .container-fluid .Hero__Img {
+    width: 100%;
+  }
+  .home .Hero .container-fluid .Hero__Img h3 {
+    font-size: 30px !important;
+  }
+}
+
+.home .RecentlySold {
+  padding-top: 150px;
+  background-color: red;
+}
+
+h1 {
+  font-family: 'Montserrat-Bold';
+  font-weight: bold;
+  font-size: 64px;
+  width: 50%;
+}
