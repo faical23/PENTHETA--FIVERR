@@ -775,7 +775,7 @@ p {
   text-transform: capitalize;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #18E5E7;
-  width: 80%;
+  width: 100%;
 }
 
 .home .RecentlySold .RecentlySold__Card .Card h4 {
