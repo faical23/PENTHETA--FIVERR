@@ -1,5 +1,5 @@
 .home{
-
+    background-color: $Primary-200;
     .Hero{
         .container-fluid{
             padding: 200px 100px 0px 100px;
@@ -165,7 +165,458 @@
 
     }
     .RecentlySold{
-        padding-top:150px ;
-        background-color: red;
+        padding:150px 100px;
+        .TitreAndButtnSwitch{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0px;
+            h2{
+                font-family: 'Montserrat-Bold';
+
+                font-style: normal;
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 64px;
+                    /* identical to box height, or 133% */
+
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                color: white;
+            }
+            .BtnSwitch{
+                position: relative;
+                right:30px;
+                button{
+                    padding: 5px 5px;
+                    background: $Primary-100;
+                    border-radius: 100%;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 30px;
+                    margin: 0px 10px;
+                    svg{
+                        width:40px;
+                        height:40px;
+                    }
+                    &:hover{
+                        background-color:transparent !important;
+                        border: 1px solid $Primary-100;
+                        svg{
+                            fill: $Primary-100;
+                        }
+                    }
+                }
+            }
+
+        }
+        .RecentlySold__Card{
+            .Card{
+                padding: 20px;
+                background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: blur(80px);
+                position: relative;
+                margin-bottom: 20px;
+                .AvatarName{
+                    padding: 20px 0px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 10px;
+                    }
+                    span{
+                        color: white;
+                    }
+                }
+                h3{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 64px;
+                    font-family: 'Montserrat-Bold';
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: $Primary-100;
+                    width:80%;
+                }
+                h4{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 26px;
+                    line-height: 64px;
+                    font-family: 'Montserrat-Bold';
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: white;
+                    width:80%;
+                    padding: 30px 0px;
+                }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 150px 0px;
+            .RecentlySold__Card{
+                .Card{
+                    h3{
+                        font-size: 25px;
+                    }
+                    h4{
+                        font-size: 20px;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 560px) {
+            padding:50px 0px;
+            .TitreAndButtnSwitch{
+
+                h2{
+                font-size:25px
+                }
+                .BtnSwitch{
+                    right:0px;
+                }
+    
+            }
+        }
+    }
+    .ExploreArt{
+        padding: 0px 100px;
+        .TitreAndFilter{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0px;
+            h2{
+                font-family: 'Montserrat-Bold';
+
+                font-style: normal;
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 64px;
+                    /* identical to box height, or 133% */
+
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                color: white;
+            }
+            .Filter{
+                button{
+                    padding: 6px 35px;
+                    background: transparent;
+                    border-radius: 40px;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 16px;
+                    border: 2px solid $Primary-100;
+                    color: $Primary-100;;
+                    svg{
+                        fill:$Primary-100;
+                    }
+                    &:hover{
+                        background-color:$Primary-100 !important;
+                        color: $black;
+                        svg{
+                            fill:black;
+                        }
+                    }
+                }
+            }
+        }
+        .ExploreArt__Card{
+            .Card{
+                padding: 20px;
+                background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: blur(80px);
+                position: relative;
+                margin-bottom: 20px;
+                .AvatarName{
+                    padding: 20px 0px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 10px;
+                    }
+                    span{
+                        color: white;
+                    }
+                }
+                h3{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 64px;
+                    font-family: 'Montserrat-Bold';
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                    color: $Primary-100;
+                    width:80%;
+                }
+                    .BuyAndPrice{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 20px 0px;
+                        width:90%;
+                        h6{
+                            padding-bottom: 5px;
+                            color: white;
+                        }
+                        h4{
+                            color: white;
+                        }
+                        button{
+                            padding: 6px 35px;
+                            background: $Primary-100;
+                            border-radius: 8px;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                            line-height: 32px;
+                            font-family: 'Montserrat-Bold';
+                            font-size: 16px;
+                            &:hover{
+                                background-color:transparent !important;
+                                border: 1px solid $Primary-100;
+                                color: $Primary-100;
+                            }
+                        }
+                }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 50px 20px;
+            .ExploreArt__Card{
+                h3{
+                    font-size:25px !important;
+                }
+                .BuyAndPrice{
+                    width: 100% !important;
+
+                }
+            }
+
+        }
+        @media screen and (max-width: 560px) {
+            .TitreAndFilter{
+                h2{
+                font-size:25px
+                }
+                .Filter{
+                    button{
+                        padding: 6px 20px;
+                        font-size: 13px;
+                        svg{
+                            fill:$Primary-100;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .PopularArtist{
+        padding:50px 100px;
+        .TitreAndButtnSwitch{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0px;
+            h2{
+                font-family: 'Montserrat-Bold';
+
+                font-style: normal;
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 64px;
+                    /* identical to box height, or 133% */
+
+                    text-transform: capitalize;
+                    font-feature-settings: 'pnum' on, 'lnum' on;
+                color: white;
+            }
+            .BtnSwitch{
+                position: relative;
+                right:30px;
+                button{
+                    padding: 5px 5px;
+                    background: $Primary-100;
+                    border-radius: 100%;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 30px;
+                    margin: 0px 10px;
+                    svg{
+                        width:40px;
+                        height:40px;
+                    }
+                    &:hover{
+                        background-color:transparent !important;
+                        border: 1px solid $Primary-100;
+                        svg{
+                            fill: $Primary-100;
+                        }
+                    }
+                }
+            }
+
+        }
+        .PopularArtis__Content{
+            .PopularArtis__Content__single{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+                width: 90%;
+                h5,span{
+                    color: white;
+                }
+                .AvatarAndName{
+                    display: flex;
+                    align-items: center;   
+                    width: 70%;
+                    img{
+                        margin-right: 20px;
+                        width: 10%;
+                        object-fit: cover;
+
+                    }
+                }
+
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 50px 20px;
+        }
+        @media screen and (max-width: 560px) {
+            .PopularArtis__Content__single{
+                width: 100%;
+            }
+            .TitreAndButtnSwitch{
+
+                h2{
+                font-size:25px
+                }
+                .BtnSwitch{
+                    right:0px;
+                }
+            }
+        }
+
+    }
+    .StayInTheTop{
+        padding: 50px 100px;
+        .StayInTheTop__content{
+            text-align: center;
+            border-radius: 10px;
+            text-align: center;
+            text-align: center;
+            color: white;
+            padding: 50px 0px;
+            
+            h1{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 64px;
+                text-align: center;
+                text-transform: capitalize;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                font-family: 'Montserrat-Bold';
+                margin: auto;
+                padding-bottom: 30px;
+                width:30%
+            }
+            p{
+                font-family: 'Montserrat-Regular';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 26px;
+                    width: 30%;
+                    margin: auto !important;
+                    padding-bottom: 30px;
+            }
+            .Subscribe{
+                width: 60%;
+                margin: auto;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                input{
+                    width: 80%;
+                    padding: 15px  10px;
+                    border-radius: 8px;
+                }
+                ::placeholder{
+                    font-size:20px;
+                }
+                button{
+                    padding: 10px 35px;
+                    background: $Primary-100;
+                    border-radius: 8px;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 16px;
+                    margin-left: 20px;
+                    &:hover{
+                        background-color:transparent !important;
+                        border: 1px solid $Primary-100;
+                        color: $Primary-100;
+                    }
+                }
+            }
+
+        }
+        @media screen and (max-width: 1440px) {
+            .StayInTheTop__content{
+                h1{
+                    width: 50%;
+                }
+                p{
+                    width: 50%;
+                }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 50px 20px;
+            .StayInTheTop__content{
+                h1{
+                    width: 80%;
+                }
+                p{
+                    width: 80%;
+                }
+                .Subscribe{
+                    width: 80%;
+                }
+            }
+        }
+        @media screen and (max-width: 560px) {
+            .StayInTheTop__content{
+
+                .Subscribe{
+                    width: 100%;
+                    display: block;
+                    button{
+                        margin: 30px 0px;
+                    }
+                }
+            }
+        }
+
     }
 }
