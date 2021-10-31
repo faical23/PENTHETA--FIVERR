@@ -17,7 +17,7 @@
               <li><router-link to="/"><img src="./assets/Img/Logo.png" alt=""></router-link> </li>
               <li><router-link to="/">Home</router-link>  </li>
               <li><router-link to="/Explore">Explore</router-link> </li>
-              <li><router-link to="/DetailArt">Detail Art</router-link> </li>
+              <!-- <li><router-link to="/DetailArt">Detail Art</router-link> </li> -->
               <li><router-link to="/NTFs">My NFTs</router-link> </li>
             </ul>
           </div>

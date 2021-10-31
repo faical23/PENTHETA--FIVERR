@@ -1,61 +1,15 @@
 <template>
   <div class="home NTFs">
-    <div class="ExploreArt MyNTFs">
-            <div class="TitreAndFilter">
-                <h2>My NFTs</h2>
-                <div class="Filter">
-                    <button>
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
-                      Filter & Sort
-                    </button>
-                </div>
-            </div>
-              <div class="ExploreArt__Card">
-                  <div class="row">
-                    <div  v-for="Explore,n in MyNTFS" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                      <div class="Card">
-                              <img :src="Explore.ImgCover" alt="">
-                              <div class="AvatarName">
-                                  <img :src="Explore.ImgAvatar" alt="">
-                                  <span>{{Explore.AvatarName}}</span>
-                              </div>
-                              <h3>{{Explore.TitreCard}}</h3>
-                              <div class="BuyAndPrice">
-                                    <button>Sell</button>
-                              </div>
-                        </div>
-                    </div>
-                  </div>  
-              </div>
-    </div>
-    <div class="ExploreArt MyNTFsOnSale">
-            <div class="TitreAndFilter">
-                <h2>My NFTs on sale</h2>
-            </div>
-              <div class="ExploreArt__Card">
-                  <div class="row">
-                    <div  v-for="Explore,n in MyNTFsOnSale" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                      <div class="Card">
-                              <img :src="Explore.ImgCover" alt="">
-                              <div class="AvatarName">
-                                  <img :src="Explore.ImgAvatar" alt="">
-                                  <span>{{Explore.AvatarName}}</span>
-                              </div>
-                              <h3>{{Explore.TitreCard}}</h3>
-                              <div class="BuyAndPrice">
-                                    <button>Cancel</button>
-                              </div>
-                        </div>
-                    </div>
-                  </div>  
-              </div>
-    </div>
+      <MyNFTSCmpt/>
+      <MyNFTSOnSale/>
     <Myfooter/>
   </div>
 </template>
 
 <script>
 import Myfooter from '../components/Footer.vue'
+import MyNFTSCmpt from '../components/MyNFTs.vue'
+import MyNFTSOnSale from '../components/MyNFTsOnSale.vue'
 
 export default {
   name: 'Home',
@@ -164,7 +118,9 @@ export default {
     }
   },
   components: {
-     Myfooter
+     Myfooter,
+     MyNFTSCmpt,
+     MyNFTSOnSale
   },
   methods:{
 
@@ -189,4 +145,3 @@ export default {
 
 
 
->
