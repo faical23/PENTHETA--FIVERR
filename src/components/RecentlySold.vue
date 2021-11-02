@@ -8,22 +8,21 @@
                     <button  @click='ShowNewRecentlySold("Next")' :style="this.EndNumberRecentlySoldShow >= this.RecentlySold.length ? 'background-color:transparent !important;border:1px solid #18E5E7' :''" ><svg  :style="this.EndNumberRecentlySoldShow >= this.RecentlySold.length? 'fill:#18E5E7' :''"  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg></button>
                 </div>
             </div>
-
-                <div class="RecentlySold__Card">
-                  <div class="row">
-                        <div v-for="Elemennt,n in RecentlySold.slice(StartNumberRecentlySoldShow,EndNumberRecentlySoldShow)" :key='n' class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div class="Card">
-                                <img :src="Elemennt.ImgCover" alt="">
-                                <div class="AvatarName">
-                                    <img :src="Elemennt.ImgAvatar" alt="">
-                                    <span>{{Elemennt.AvatarName}}</span>
-                                </div>
-                                <h3>{{Elemennt.TitreCard}}</h3>
-                                <h4>Price: {{Elemennt.Price}} TFuel</h4>
-                          </div>
-                        </div>
-                    </div>  
+            <div class="RacebltySold__Content">
+                <div class="RacebltySold__Content_Single" v-for="Racently,n in RecentlySold.slice(StartNumberRecentlySoldShow,EndNumberRecentlySoldShow)" :key="n">
+                  <table >
+                    <tr>
+                      <th>
+                            <img :src="Racently.ImgAvatar" alt="">
+                      </th>
+                      <th><span>{{Racently.ANameNft}}</span></th>
+                      <th><span>{{Racently.ArtistName}}</span></th>
+                      <th><span>{{Racently.Price}}</span></th>
+                      <th><span>{{Racently.Date}}</span></th>
+                    </tr>
+                  </table>
                 </div>
+            </div>
         </div>
     </div>
 </template>
@@ -36,57 +35,186 @@ export default {
     return{
         RecentlySold:[
           {
-            ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
-            AvatarName:'Yerikho Christian',
-            TitreCard:'Inner State : Joy',
-            Price:'100'
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
-          {
-                        ImgCover:require('../assets/Img/CardImg.png'),
-                        ImgAvatar:require('../assets/Img/Avatar.png'),
-
-            AvatarName:'Rudolf Basna',
-            TitreCard:'Sequences Scene',
-            Price:'100'
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
-          {
-                        ImgCover:require('../assets/Img/CardImg.png'),
-                        ImgAvatar:require('../assets/Img/Avatar.png'),
-
-            AvatarName:'Antoni Djomabala',
-            TitreCard:'Birdy Birdy Birdy',
-            Price:'100'
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
-          {
-                        ImgCover:require('../assets/Img/CardImg.png'),
-                        ImgAvatar:require('../assets/Img/Avatar.png'),
-
-            AvatarName:'lorem lorem',
-            TitreCard:'Lorem lorem',
-            Price:'100'
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
-          {
-          ImgCover:require('../assets/Img/CardImg.png'),
-                        ImgAvatar:require('../assets/Img/Avatar.png'),
-
-            AvatarName:'Antoni Djomabala',
-            TitreCard:'Lorem lorem',
-            Price:'100'
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
-          {
-          ImgCover:require('../assets/Img/CardImg.png'),
-                        ImgAvatar:require('../assets/Img/Avatar.png'),
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+  {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
 
-            AvatarName:'lorem lorem',
-            TitreCard:'Lorem lorem',
-            Price:'100'
+            {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
+          },
+                    {
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+            ANameNft:'Name of NFT',
+            ArtistName:'ArtistName',
+            Price:'100',
+            Date:'10/05/2021'
           },
           
           
         ],
         StartNumberRecentlySoldShow:0,
-        EndNumberRecentlySoldShow:3,
+        EndNumberRecentlySoldShow:10
 
 
     }
@@ -97,14 +225,14 @@ export default {
     ShowNewRecentlySold(Condition){
       if(Condition == "Next"){
         if(!(this.EndNumberRecentlySoldShow >= this.RecentlySold.length)){
-            this.StartNumberRecentlySoldShow +=3
-            this.EndNumberRecentlySoldShow +=3
+            this.StartNumberRecentlySoldShow +=10
+            this.EndNumberRecentlySoldShow +=10
         }
       }
       else{
         if(this.StartNumberRecentlySoldShow != 0){
-            this.StartNumberRecentlySoldShow -=3
-            this.EndNumberRecentlySoldShow -=3
+            this.StartNumberRecentlySoldShow -=10
+            this.EndNumberRecentlySoldShow -=10
         }
       }
     },

@@ -217,67 +217,46 @@
             }
 
         }
-        .RecentlySold__Card{
-            .Card{
-                padding: 20px;
-                background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-                backdrop-filter: blur(80px);
-                position: relative;
-                margin-bottom: 20px;
-                .AvatarName{
-                    padding: 20px 0px;
-                    display: flex;
-                    align-items: center;
+
+        .RacebltySold__Content{
+            .RacebltySold__Content_Single{
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                width: 100%;
+                margin: 30px 0px;
+                th{
                     img{
-                        margin-right: 10px;
+                        width: 60px;
+                        height:60px;
                     }
                     span{
-                        color: white;
+                        color:white;
+                        font-size: 20px;
+                        font-family: 'Montserrat-Bold';
                     }
-                }
-                h3{
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 30px;
-                    line-height: 64px;
-                    font-family: 'Montserrat-Bold';
-                    text-transform: capitalize;
-                    font-feature-settings: 'pnum' on, 'lnum' on;
-                    color: $Primary-100;
-                    width:100%;
-                }
-                h4{
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 26px;
-                    line-height: 64px;
-                    font-family: 'Montserrat-Bold';
-                    text-transform: capitalize;
-                    font-feature-settings: 'pnum' on, 'lnum' on;
-                    color: white;
-                    width:80%;
-                    padding: 30px 0px;
+                    width:600px;
+                    text-align:start;
+                    padding:0px 20px;
                 }
             }
         }
         @media screen and (max-width: 1024px) {
             padding: 150px 0px;
-            .RecentlySold__Card{
-                .Card{
-                    h3{
-                        font-size: 25px;
-                    }
-                    h4{
-                        font-size: 20px;
-                        padding: 10px 0px;
-                    }
+        }
+         @media screen and (max-width: 768px) {
+            padding:50px 0px;
+            .RacebltySold__Content{
+                width: 100%;
+                overflow: scroll;
+                .RacebltySold__Content_Single{
+                    width:1000px !important;
                 }
             }
         }
         @media screen and (max-width: 560px) {
             padding:50px 0px;
             .TitreAndButtnSwitch{
-
                 h2{
                 font-size:25px
                 }
@@ -287,6 +266,7 @@
     
             }
         }
+
     }
     .ExploreArt{
         padding: 0px 100px;

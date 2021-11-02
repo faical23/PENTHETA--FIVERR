@@ -748,63 +748,47 @@ p {
   fill: #18E5E7;
 }
 
-.home .RecentlySold .RecentlySold__Card .Card {
-  padding: 20px;
-  background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-  backdrop-filter: blur(80px);
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.home .RecentlySold .RecentlySold__Card .Card .AvatarName {
-  padding: 20px 0px;
+.home .RecentlySold .RacebltySold__Content .RacebltySold__Content_Single {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-.home .RecentlySold .RecentlySold__Card .Card .AvatarName img {
-  margin-right: 10px;
-}
-
-.home .RecentlySold .RecentlySold__Card .Card .AvatarName span {
-  color: white;
-}
-
-.home .RecentlySold .RecentlySold__Card .Card h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 64px;
-  font-family: 'Montserrat-Bold';
-  text-transform: capitalize;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #18E5E7;
   width: 100%;
+  margin: 30px 0px;
 }
 
-.home .RecentlySold .RecentlySold__Card .Card h4 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 64px;
-  font-family: 'Montserrat-Bold';
-  text-transform: capitalize;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+.home .RecentlySold .RacebltySold__Content .RacebltySold__Content_Single th {
+  width: 600px;
+  text-align: start;
+  padding: 0px 20px;
+}
+
+.home .RecentlySold .RacebltySold__Content .RacebltySold__Content_Single th img {
+  width: 60px;
+  height: 60px;
+}
+
+.home .RecentlySold .RacebltySold__Content .RacebltySold__Content_Single th span {
   color: white;
-  width: 80%;
-  padding: 30px 0px;
+  font-size: 20px;
+  font-family: 'Montserrat-Bold';
 }
 
 @media screen and (max-width: 1024px) {
   .home .RecentlySold {
     padding: 150px 0px;
   }
-  .home .RecentlySold .RecentlySold__Card .Card h3 {
-    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .home .RecentlySold {
+    padding: 50px 0px;
   }
-  .home .RecentlySold .RecentlySold__Card .Card h4 {
-    font-size: 20px;
-    padding: 10px 0px;
+  .home .RecentlySold .RacebltySold__Content {
+    width: 100%;
+    overflow: scroll;
+  }
+  .home .RecentlySold .RacebltySold__Content .RacebltySold__Content_Single {
+    width: 1000px !important;
   }
 }
 
