@@ -151,11 +151,12 @@
             .container-fluid{
                 display: block;
                 text-align: center;
+                padding: 200px 0px 30px 0px;
                 .Hero__Content{
                     h1{
-                        font-size:40px !important;
+                        font-size:22px !important;
                         width:100%;
-                        line-height:60px;
+                        line-height:40px;
                     }
                 }
                 .Hero__Img{
@@ -315,12 +316,23 @@
             }
         }
         .ExploreArt__Card{
+            // display: grid;
+            // grid-template-columns: repeat(auto-fit ,minmax(500px,1fr));  /* should learn this funtion */
+            // justify-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             .Card{
-                padding: 20px;
+                max-width: 350px;
+                padding: 20px 10px;
                 background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
                 backdrop-filter: blur(80px);
                 position: relative;
-                margin-bottom: 20px;
+                margin: 20px;
+                .NFTImg{
+                    height:360px;
+                    object-fit: cover;
+                }
                 .AvatarName{
                     padding: 20px 0px;
                     display: flex;
@@ -335,7 +347,7 @@
                 h3{
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 30px;
+                    font-size: 24px;
                     line-height: 64px;
                     font-family: 'Montserrat-Bold';
                     text-transform: capitalize;

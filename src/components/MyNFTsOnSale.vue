@@ -4,10 +4,9 @@
                 <h2>My NFTs on sale</h2>
             </div>
               <div class="ExploreArt__Card">
-                  <div class="row">
-                    <div  v-for="Explore,n in MyNTFsOnSale" :key="n" class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div  v-for="Explore,n in MyNTFsOnSale" :key="n">
                       <div class="Card">
-                              <img :src="Explore.ImgCover" alt="">
+                              <img :src="Explore.ImgCover" alt="" class="NFTImg">
                               <div class="AvatarName">
                                   <img :src="Explore.ImgAvatar" alt="">
                                   <span>{{Explore.AvatarName}}</span>
@@ -17,7 +16,6 @@
                                     <button>Cancel</button>
                               </div>
                         </div>
-                    </div>
                   </div>  
               </div>
     </div>
@@ -64,6 +62,22 @@ export default {
             Price:'100'
           },
           {
+                        ImgCover:require('../assets/Img/CardImg.png'),
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+                        AvatarName:'Jack Hammer',
+
+            TitreCard:'Preset Presence',
+            Price:'100'
+          },
+          {
+                        ImgCover:require('../assets/Img/CardImg.png'),
+            ImgAvatar:require('../assets/Img/Avatar.png'),
+                        AvatarName:'Roy Ricardo',
+
+            TitreCard:'namarizonia',
+            Price:'100'
+          },
+                    {
                         ImgCover:require('../assets/Img/CardImg.png'),
             ImgAvatar:require('../assets/Img/Avatar.png'),
                         AvatarName:'Jack Hammer',
