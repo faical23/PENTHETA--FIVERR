@@ -6,14 +6,14 @@
               <div class="ExploreArt__Card">
                     <div  v-for="Explore,n in MyNTFsOnSale" :key="n">
                       <div class="Card">
-                              <img :src="Explore.ImgCover" alt="" class="NFTImg">
+                              <img :src="Explore.ImgCover" alt="" class="NFTImg" @click="SwitchToDetailArt(Explore)">
                               <div class="AvatarName">
                                   <img :src="Explore.ImgAvatar" alt="">
                                   <span>{{Explore.AvatarName}}</span>
                               </div>
                               <h3>{{Explore.TitreCard}}</h3>
                               <div class="BuyAndPrice">
-                                    <button>Cancel</button>
+                                    <button @click='CancelFunction()'>Cancel</button>
                               </div>
                         </div>
                   </div>  
@@ -101,7 +101,13 @@ export default {
 
   },
   methods:{
-
+    SwitchToDetailArt(Explore){
+      this.$store.commit('GetDetailArtData',Explore)
+      this.$router.push('/DetailArt')
+    },
+    CancelFunction(){
+      console.log("Cancel function")
+    }
   }
 
 }

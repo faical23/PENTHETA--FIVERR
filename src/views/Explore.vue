@@ -6,8 +6,11 @@
                 <h1>Explore Now</h1>
                 <h1> & Get Experience</h1>
                 <div class="SearchInput">
-                      <input type="text" placeholder="Search Favorite Artist or Collector">
-                      <button>Search Now</button>
+                  <input type="text" class="inpsearch" list="mysearch" placeholder="Search Place ..." @keyup="SerchFuntion()" v-model="BarSearch">
+                      <datalist id="mysearch">
+                          <option   v-for="NFT,n in  ResultSearch" :key="n" :value="NFT"/>
+                      </datalist>
+                      <button @click="GoToDetailPage()">Search Now</button>
                 </div>
             </div>
         </div>
@@ -23,11 +26,16 @@ import Myfooter from '../components/Footer.vue'
 import NewArtistCmpt from '../components/NewArtist.vue'
 import NewCryptoCmpt from '../components/NewCryptoArt.vue'
 
+import axios from "axios";
+import API_URL from "../../Config";
+
 export default {
   name: 'Home',
   data() {      
     return{
-
+      SearchNft : 'a',
+      ResultSearch:[],
+      BarSearch:''
 
     }
   },
@@ -37,7 +45,27 @@ export default {
      NewCryptoCmpt
   },
   methods:{
-
+    ResultSearchFuntion(){
+            axios
+              .get(`${API_URL}nft/search/${this.SearchNft}`)
+              .then(response => {
+                response.data.forEach(element => {
+                    this.ResultSearch.push(element.name)
+                });
+                // console.log(response)
+                // console.log("result" ,this.ResultSearch)
+              })
+    },
+    SerchFuntion(){
+        this.SearchNft = this.BarSearch
+        this.ResultSearchFuntion()
+    },
+    GoToDetailPage(){
+      console.log(this.BarSearch)
+    }
+  },
+  mounted() {
+    this.ResultSearchFuntion()
   }
 
 }

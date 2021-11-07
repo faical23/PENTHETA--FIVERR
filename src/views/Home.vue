@@ -7,20 +7,19 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 <button>Start Collecting</button>
             </div>
-            <div class="Hero__Img">
-                <img src="../assets/Img/CardImg.png" alt="">
+            <div class="Hero__Img" style='width:500px !important;'>
+                <img :src="ImgUrl" alt="" class="NftImg" >
                 <div class="AvatarName">
-                    <img src="../assets/Img/Avatar.png" alt="">
-                    <span>Angelina Siaahaan</span>
+                    <img :src="ProjectImgUrl != '' ? ProjectImgUrl : require('../assets/Img/Avatar.png')" alt="" class="ProjetImg">
+                    <span>{{creator}}</span>
                 </div>
-                <h3>Blurry Effection</h3>
+                <h3>{{NftName}}</h3>
                 <div class="BuyAndPrice">
-                    <button>Buy</button>
+                    <button @click='BuyFunction()'>Buy</button>
                     <div class="Price">
                         <h6>Price:</h6>
-                        <h4>100 TFuel</h4>
+                        <h4> 100 TFuel</h4>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -49,11 +48,18 @@ import RecentlySoldCmpt from '../components/RecentlySold.vue'
 import ExploreArtCmpt from '../components/ExploreArt.vue'
 import PopularArtistCmpt from '../components/PopularArtist.vue'
 
+import axios from 'axios'
+import API_URL from "../../Config";
+// import ethers from 'ethers'
 export default {
   name: 'Home',
   data() {      
     return{
-
+      ImgUrl : '',
+      Price:'',
+      NftName : '',
+      creator : '',
+      ProjectImgUrl : ''
 
     }
   },
@@ -64,7 +70,24 @@ export default {
     PopularArtistCmpt
   },
   methods:{
-
+    GetpromotedData(){
+            axios
+              .get(`${API_URL}nft/promoted`)
+              .then(response => {
+                this.Price = response.data.price
+                this.ImgUrl = response.data.imgUrl
+                this.NftName = response.data.name
+                this.creator = response.data.creator
+                this.ProjectImgUrl = response.data.projectImgUrl
+                // console.log(response.data)
+              })
+    },
+    BuyFunction(){
+      console.log("this is buy funtion")
+    }
+  },
+  mounted() {
+    this.GetpromotedData()
   }
 
 }

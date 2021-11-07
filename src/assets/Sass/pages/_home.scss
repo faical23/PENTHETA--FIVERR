@@ -63,18 +63,21 @@
                     align-items: center;
                     img{
                         margin-right: 10px;
+                        width:45px;
+                        height:45px;
+                        border-radius: 100%;
                     }
                 }
                 h3{
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 44px;
-                    line-height: 64px;
+                    font-size: 27px;
+                    line-height: 44px;
                     font-family: 'Montserrat-Bold';
                     text-transform: capitalize;
                     font-feature-settings: 'pnum' on, 'lnum' on;
                     color: $Primary-100;
-                    width:80%;
+                    width:100%;
                 }
                 .BuyAndPrice{
                     display: flex;
@@ -107,11 +110,12 @@
         @media screen and (max-width: 1440px) {
             .Hero__Content{
                 h1{
-                    width: 100%;
+                    width: 100% !important;
+                    font-size: 50px !important;
                 }
             }
             .Hero__Img{
-                right:0px;
+                right:0px !important;
                 h3{
                     width: 100% !important;
                 }
@@ -122,6 +126,7 @@
 
         }
         @media screen and (max-width: 1024px) {
+            
             .container-fluid{
                 padding: 200px 20px 30px 20px;
             }
@@ -139,11 +144,15 @@
                         width: 100%;
                     }
                 }
+
                 .Hero__Img{
                     width: 70%;
                     right:0px;
                     top: 0px;
                     margin: 30px auto;
+                    h3{
+                        font-size:35px !important;
+                    }
                 }
             }
         }
@@ -154,9 +163,9 @@
                 padding: 200px 0px 30px 0px;
                 .Hero__Content{
                     h1{
-                        font-size:22px !important;
+                        font-size:35px !important;
                         width:100%;
-                        line-height:40px;
+                        line-height:60px;
                     }
                 }
                 .Hero__Img{
@@ -164,9 +173,21 @@
                     h3{
                         font-size:30px !important;
                     }
+                    .NftImg{
+                        height:300px;
+                        width:300px;
+                    }
+                }
+                .BuyAndPrice{
+                    padding:0px 10px;
+                    text-align: start;
+                    h4{
+                        font-size:25px !important;
+                    }
                 }
             }
         }
+        
 
     }
     .RecentlySold{
@@ -230,6 +251,7 @@
                     img{
                         width: 60px;
                         height:60px;
+
                     }
                     span{
                         color:white;
@@ -242,6 +264,16 @@
                 }
             }
         }
+        .Centent{
+            img{
+                width:70px;
+                border-radius: 100%;
+            }
+            span{
+                color: white !important;
+            }
+        }
+
         @media screen and (max-width: 1024px) {
             padding: 150px 0px;
         }
@@ -259,10 +291,14 @@
             padding:50px 0px;
             .TitreAndButtnSwitch{
                 h2{
-                font-size:25px
+                font-size:20px
                 }
                 .BtnSwitch{
                     right:0px;
+                    svg{
+                        width:30px !important;
+                        height:30px !important;
+                    }
                 }
     
             }
@@ -316,13 +352,12 @@
             }
         }
         .ExploreArt__Card{
-            // display: grid;
-            // grid-template-columns: repeat(auto-fit ,minmax(500px,1fr));  /* should learn this funtion */
-            // justify-items: center;
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             .Card{
+                cursor: pointer;
                 max-width: 350px;
                 padding: 20px 10px;
                 background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -391,7 +426,7 @@
             padding: 50px 20px;
             .ExploreArt__Card{
                 h3{
-                    font-size:25px !important;
+                    font-size:25px ;
                 }
                 .BuyAndPrice{
                     width: 100% !important;
@@ -401,10 +436,22 @@
 
         }
         @media screen and (max-width: 560px) {
+            .Card{
+                padding: 10px 7px !important;
+            }
+            .NFTImg{
+                height:300px !important;
+                object-fit: cover;
+            }
+            h3{
+                font-size:20px !important;
+                width:100% !important;
+            }
             .TitreAndFilter{
                 h2{
                 font-size:18px
                 }
+
                 .Filter{
                     button{
                         padding: 6px 20px;
@@ -496,15 +543,25 @@
         }
         @media screen and (max-width: 560px) {
             .PopularArtis__Content__single{
-                width: 100%;
+                width: 100% !important;
             }
             .TitreAndButtnSwitch{
-
                 h2{
-                font-size:25px
+                font-size:20px
                 }
+
                 .BtnSwitch{
                     right:0px;
+                    svg{
+                        width:30px !important;
+                        height:30px !important;
+                    }
+                }
+    
+            }
+            .AvatarAndName{
+                img{
+                    width:20% !important;
                 }
             }
         }
@@ -603,7 +660,10 @@
         }
         @media screen and (max-width: 560px) {
             .StayInTheTop__content{
-
+                h1{
+                    font-size:30px;
+                    width: 100%;
+                }
                 .Subscribe{
                     width: 100%;
                     display: block;

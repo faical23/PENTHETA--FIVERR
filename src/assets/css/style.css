@@ -588,18 +588,21 @@ p {
 
 .home .Hero .container-fluid .Hero__Img .AvatarName img {
   margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
 }
 
 .home .Hero .container-fluid .Hero__Img h3 {
   font-style: normal;
   font-weight: bold;
-  font-size: 44px;
-  line-height: 64px;
+  font-size: 27px;
+  line-height: 44px;
   font-family: 'Montserrat-Bold';
   text-transform: capitalize;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #18E5E7;
-  width: 80%;
+  width: 100%;
 }
 
 .home .Hero .container-fluid .Hero__Img .BuyAndPrice {
@@ -634,10 +637,11 @@ p {
 
 @media screen and (max-width: 1440px) {
   .home .Hero .Hero__Content h1 {
-    width: 100%;
+    width: 100% !important;
+    font-size: 50px !important;
   }
   .home .Hero .Hero__Img {
-    right: 0px;
+    right: 0px !important;
   }
   .home .Hero .Hero__Img h3 {
     width: 100% !important;
@@ -673,6 +677,9 @@ p {
     top: 0px;
     margin: 30px auto;
   }
+  .home .Hero .container-fluid .Hero__Img h3 {
+    font-size: 35px !important;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -682,15 +689,26 @@ p {
     padding: 200px 0px 30px 0px;
   }
   .home .Hero .container-fluid .Hero__Content h1 {
-    font-size: 22px !important;
+    font-size: 35px !important;
     width: 100%;
-    line-height: 40px;
+    line-height: 60px;
   }
   .home .Hero .container-fluid .Hero__Img {
     width: 100%;
   }
   .home .Hero .container-fluid .Hero__Img h3 {
     font-size: 30px !important;
+  }
+  .home .Hero .container-fluid .Hero__Img .NftImg {
+    height: 300px;
+    width: 300px;
+  }
+  .home .Hero .container-fluid .BuyAndPrice {
+    padding: 0px 10px;
+    text-align: start;
+  }
+  .home .Hero .container-fluid .BuyAndPrice h4 {
+    font-size: 25px !important;
   }
 }
 
@@ -774,6 +792,15 @@ p {
   font-family: 'Montserrat-Bold';
 }
 
+.home .RecentlySold .Centent img {
+  width: 70px;
+  border-radius: 100%;
+}
+
+.home .RecentlySold .Centent span {
+  color: white !important;
+}
+
 @media screen and (max-width: 1024px) {
   .home .RecentlySold {
     padding: 150px 0px;
@@ -798,10 +825,14 @@ p {
     padding: 50px 0px;
   }
   .home .RecentlySold .TitreAndButtnSwitch h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .home .RecentlySold .TitreAndButtnSwitch .BtnSwitch {
     right: 0px;
+  }
+  .home .RecentlySold .TitreAndButtnSwitch .BtnSwitch svg {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
 
@@ -862,6 +893,7 @@ p {
 }
 
 .home .ExploreArt .ExploreArt__Card .Card {
+  cursor: pointer;
   max-width: 350px;
   padding: 20px 10px;
   background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -941,7 +973,7 @@ p {
     padding: 50px 20px;
   }
   .home .ExploreArt .ExploreArt__Card h3 {
-    font-size: 25px !important;
+    font-size: 25px;
   }
   .home .ExploreArt .ExploreArt__Card .BuyAndPrice {
     width: 100% !important;
@@ -949,6 +981,17 @@ p {
 }
 
 @media screen and (max-width: 560px) {
+  .home .ExploreArt .Card {
+    padding: 10px 7px !important;
+  }
+  .home .ExploreArt .NFTImg {
+    height: 300px !important;
+    object-fit: cover;
+  }
+  .home .ExploreArt h3 {
+    font-size: 20px !important;
+    width: 100% !important;
+  }
   .home .ExploreArt .TitreAndFilter h2 {
     font-size: 18px;
   }
@@ -1048,13 +1091,20 @@ p {
 
 @media screen and (max-width: 560px) {
   .home .PopularArtist .PopularArtis__Content__single {
-    width: 100%;
+    width: 100% !important;
   }
   .home .PopularArtist .TitreAndButtnSwitch h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .home .PopularArtist .TitreAndButtnSwitch .BtnSwitch {
     right: 0px;
+  }
+  .home .PopularArtist .TitreAndButtnSwitch .BtnSwitch svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .home .PopularArtist .AvatarAndName img {
+    width: 20% !important;
   }
 }
 
@@ -1158,6 +1208,10 @@ p {
 }
 
 @media screen and (max-width: 560px) {
+  .home .StayInTheTop .StayInTheTop__content h1 {
+    font-size: 30px;
+    width: 100%;
+  }
   .home .StayInTheTop .StayInTheTop__content .Subscribe {
     width: 100%;
     display: block;
@@ -1239,7 +1293,21 @@ p {
 }
 
 .NTFs .MyNTFs .BuyAndPrice button, .NTFs .MyNTFsOnSale .BuyAndPrice button {
-  padding: 6px 50px !important;
+  padding: 6px 50px;
+}
+
+@media screen and (max-width: 560px) {
+  .NTFs .MyNTFs {
+    padding-top: 100px;
+  }
+  .NTFs .Filter button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .NTFs .Filter button svg {
+    margin-right: 5px;
+  }
 }
 
 .DetailArt {
@@ -1253,7 +1321,8 @@ p {
 }
 
 .DetailArt .Hero .container-fluid .BigImg {
-  width: 30%;
+  width: 500px;
+  height: 700px;
   border-bottom-right-radius: 30px;
   box-shadow: 1px 1px 0px 26px rgba(255, 255, 255, 0.2);
 }
@@ -1285,6 +1354,8 @@ p {
 
 .DetailArt .Hero .container-fluid .Hero__Content .AvatarName img {
   margin-right: 10px;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .DetailArt .Hero .container-fluid .Hero__Content .Price h1 {
@@ -1324,7 +1395,8 @@ p {
     top: 0px !important;
   }
   .DetailArt .Hero .container-fluid .BigImg {
-    width: 100% !important;
+    width: 400px;
+    height: 500px;
   }
   .DetailArt .Hero .container-fluid .Hero__Content {
     width: 100% !important;

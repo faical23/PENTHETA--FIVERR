@@ -1,13 +1,30 @@
 .NTFs{
     .MyNTFs{
         padding-top:200px;
+
     }
     .MyNTFs,.MyNTFsOnSale{
         .BuyAndPrice{
             justify-content:center !important;
             button{
-                padding: 6px 50px !important;
+                padding: 6px 50px ;
             }
         }
+    }
+    @media screen and (max-width: 560px) {
+        .MyNTFs{
+            padding-top:100px;
+        }
+        .Filter{
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                svg{
+                    margin-right: 5px;
+                }
+            }
+        }
+
     }
 }

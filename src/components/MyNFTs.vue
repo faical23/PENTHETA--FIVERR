@@ -12,14 +12,14 @@
               <div class="ExploreArt__Card">
                     <div  v-for="Explore,n in MyNTFS" :key="n">
                       <div class="Card">
-                              <img :src="Explore.ImgCover" alt="" class="NFTImg">
+                              <img :src="Explore.ImgCover" alt="" class="NFTImg" @click="SwitchToDetailArt(Explore)">
                               <div class="AvatarName">
                                   <img :src="Explore.ImgAvatar" alt="">
                                   <span>{{Explore.AvatarName}}</span>
                               </div>
                               <h3>{{Explore.TitreCard}}</h3>
                               <div class="BuyAndPrice">
-                                    <button>Sell</button>
+                                    <button  @click="SellFuniton()">Sell</button>
                               </div>
                         </div>
                   </div>  
@@ -107,7 +107,13 @@ export default {
   components: {
   },
   methods:{
-
+    SwitchToDetailArt(Explore){
+      this.$store.commit('GetDetailArtData',Explore)
+      this.$router.push('/DetailArt')
+    },
+    SellFuniton(){
+      console.log("Sel funtion")
+    }
   }
 
 }
