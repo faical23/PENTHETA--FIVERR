@@ -133,6 +133,12 @@
     }
     @media screen and (max-width: 1024px) {
         padding: 60px 0px;
+        .LeftNavbar{
+            width:70%;
+            img{
+                width: 150px;
+            }
+        }
         .RightNavbar{
             button{
                 padding: 10px 25px !important ;

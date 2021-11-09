@@ -79,6 +79,9 @@
                     color: $Primary-100;
                     width:100%;
                 }
+                .NftImg{
+                    width: 500px;
+                }
                 .BuyAndPrice{
                     display: flex;
                     align-items: center;
@@ -169,13 +172,13 @@
                     }
                 }
                 .Hero__Img{
-                    width: 100%;
+                    width:100%;
                     h3{
                         font-size:30px !important;
                     }
                     .NftImg{
-                        height:300px;
-                        width:300px;
+                        height:350px;
+                        width:350px;
                     }
                 }
                 .BuyAndPrice{
@@ -312,6 +315,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 50px 0px;
+            position: relative;
             h2{
                 font-family: 'Montserrat-Bold';
 
@@ -382,13 +386,13 @@
                 h3{
                     font-style: normal;
                     font-weight: bold;
-                    font-size: 24px;
-                    line-height: 64px;
+                    font-size: 19px;
+                    line-height: 32px;
                     font-family: 'Montserrat-Bold';
                     text-transform: capitalize;
                     font-feature-settings: 'pnum' on, 'lnum' on;
-                    color: $Primary-100;
-                    width:80%;
+                    color: #18E5E7;
+                    width: 100%;
                 }
                     .BuyAndPrice{
                         display: flex;

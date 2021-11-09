@@ -91,6 +91,17 @@
             }
 
         }
+        @media screen and (max-width: 768px) 
+        {
+            .container-fluid{
+
+                .BigImg{
+                    width:300px !important;
+                    height: 500px;
+                }
+            }
+
+        }
     }
     .History{
         padding: 250px 0px 50px 0px;
@@ -137,6 +148,7 @@
     }
     .ExploreArt{
         .TitreAndFilter{
+            position: relative;
             h2{
                 width: 70% ;
             }

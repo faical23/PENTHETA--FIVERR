@@ -46,7 +46,7 @@ export default {
         ],
         StartNumberRecentlySoldShow:0,
         EndNumberRecentlySoldShow:10,
-        GetFirstRacently:10,
+        GetFirstRacently:5,
 
 
     }
@@ -57,27 +57,27 @@ export default {
     ShowNewRecentlySold(Condition){
       if(Condition == "Next"){
         if(!(this.EndNumberRecentlySoldShow >= this.RecentlySold.length)){
-            this.StartNumberRecentlySoldShow +=10
-            this.EndNumberRecentlySoldShow +=10
+            this.StartNumberRecentlySoldShow +=5
+            this.EndNumberRecentlySoldShow +=5
         }
       }
       else{
         if(this.StartNumberRecentlySoldShow != 0){
-            this.StartNumberRecentlySoldShow -=10
-            this.EndNumberRecentlySoldShow -=10
+            this.StartNumberRecentlySoldShow -=5
+            this.EndNumberRecentlySoldShow -=5
         }
       }
     },
     GetNext(){
-        this.GetFirstRacently +=10
-        this.StartNumberRecentlySoldShow +=10;
-        this.EndNumberRecentlySoldShow +=10
+        this.GetFirstRacently +=5
+        this.StartNumberRecentlySoldShow +=5
+        this.EndNumberRecentlySoldShow +=5
         this.GetRecentySoldData(this.GetFirstRacently)
     },
     GetBack(){
-        this.GetFirstRacently -=10
-        this.StartNumberRecentlySoldShow -=10;
-        this.EndNumberRecentlySoldShow -=10
+        this.GetFirstRacently -=5
+        this.StartNumberRecentlySoldShow -=5
+        this.EndNumberRecentlySoldShow -=5
         this.GetRecentySoldData(this.GetFirstRacently)
       console.log("back")
     },

@@ -1,0 +1,90 @@
+.PopupFilter{
+    background-color:white;
+    position:absolute;
+    right:0;
+    width:600px;
+    border-radius:10px;
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+    padding:20px;
+    z-index: 100;
+    top: 100px;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        position: relative;
+        top: 20px;
+        border-radius: 30px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background-color:  #c3c3c3;
+        border-radius: 10px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background:   #18E5E7;
+        border-radius: 10px;
+    }
+    .Projet,.creator,.Price{
+        width:90%;
+        margin: 0px 5px;
+        h6{
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+        ul{
+            height:200px;
+            overflow-y: scroll;
+            li{
+                padding: 5px 0px;
+                display: flex;
+                align-items: center;
+                input{
+                    margin-right: 5px;
+                }
+                span{
+                    font-size:15px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .Price{
+        button{
+            display: block;
+            padding: 8px 20px;
+            border-radius:5px;
+            margin: 10px auto;
+            background-color:$Primary-100;
+            color: black;
+            font-weight: bold;
+            &:hover{
+                border: 1px solid $Primary-100;
+                background-color:transparent;
+            }
+        }
+        input{
+            margin: 10px auto;
+            border: 1px solid black;
+            width: 100%;
+            padding: 5px;
+            border-radius:4px;
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        width:100% !important;
+    }
+    @media screen and (max-width: 600px) {
+        display: block;
+        width:100% !important;
+        ul{
+            height:100px !important;
+        }
+    }
+}

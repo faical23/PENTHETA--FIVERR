@@ -7,7 +7,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 <button>Start Collecting</button>
             </div>
-            <div class="Hero__Img" style='width:500px !important;'>
+            <div class="Hero__Img">
                 <img :src="ImgUrl" alt="" class="NftImg" >
                 <div class="AvatarName">
                     <img :src="ProjectImgUrl != '' ? ProjectImgUrl : require('../assets/Img/Avatar.png')" alt="" class="ProjetImg">

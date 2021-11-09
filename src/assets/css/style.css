@@ -375,6 +375,12 @@ p {
   .Navbar {
     padding: 60px 0px;
   }
+  .Navbar .LeftNavbar {
+    width: 70%;
+  }
+  .Navbar .LeftNavbar img {
+    width: 150px;
+  }
   .Navbar .RightNavbar button {
     padding: 10px 25px !important;
   }
@@ -511,6 +517,110 @@ p {
   }
 }
 
+.PopupFilter {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  width: 600px;
+  border-radius: 10px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 100;
+  top: 100px;
+  /* Track */
+  /* Handle */
+}
+
+.PopupFilter ::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+  top: 20px;
+  border-radius: 30px;
+}
+
+.PopupFilter ::-webkit-scrollbar-track {
+  background-color: #c3c3c3;
+  border-radius: 10px;
+}
+
+.PopupFilter ::-webkit-scrollbar-thumb {
+  background: #18E5E7;
+  border-radius: 10px;
+}
+
+.PopupFilter .Projet, .PopupFilter .creator, .PopupFilter .Price {
+  width: 90%;
+  margin: 0px 5px;
+}
+
+.PopupFilter .Projet h6, .PopupFilter .creator h6, .PopupFilter .Price h6 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.PopupFilter .Projet ul, .PopupFilter .creator ul, .PopupFilter .Price ul {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.PopupFilter .Projet ul li, .PopupFilter .creator ul li, .PopupFilter .Price ul li {
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.PopupFilter .Projet ul li input, .PopupFilter .creator ul li input, .PopupFilter .Price ul li input {
+  margin-right: 5px;
+}
+
+.PopupFilter .Projet ul li span, .PopupFilter .creator ul li span, .PopupFilter .Price ul li span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.PopupFilter .Price button {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  background-color: #18E5E7;
+  color: black;
+  font-weight: bold;
+}
+
+.PopupFilter .Price button:hover {
+  border: 1px solid #18E5E7;
+  background-color: transparent;
+}
+
+.PopupFilter .Price input {
+  margin: 10px auto;
+  border: 1px solid black;
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .PopupFilter {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .PopupFilter {
+    display: block;
+    width: 100% !important;
+  }
+  .PopupFilter ul {
+    height: 100px !important;
+  }
+}
+
 .home {
   background-color: #1C1C1C;
 }
@@ -603,6 +713,10 @@ p {
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #18E5E7;
   width: 100%;
+}
+
+.home .Hero .container-fluid .Hero__Img .NftImg {
+  width: 500px;
 }
 
 .home .Hero .container-fluid .Hero__Img .BuyAndPrice {
@@ -700,8 +814,8 @@ p {
     font-size: 30px !important;
   }
   .home .Hero .container-fluid .Hero__Img .NftImg {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
   }
   .home .Hero .container-fluid .BuyAndPrice {
     padding: 0px 10px;
@@ -845,6 +959,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 50px 0px;
+  position: relative;
 }
 
 .home .ExploreArt .TitreAndFilter h2 {
@@ -924,13 +1039,13 @@ p {
 .home .ExploreArt .ExploreArt__Card .Card h3 {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 64px;
+  font-size: 19px;
+  line-height: 32px;
   font-family: 'Montserrat-Bold';
   text-transform: capitalize;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #18E5E7;
-  width: 80%;
+  width: 100%;
 }
 
 .home .ExploreArt .ExploreArt__Card .Card .BuyAndPrice {
@@ -1408,6 +1523,13 @@ p {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .DetailArt .Hero .container-fluid .BigImg {
+    width: 300px !important;
+    height: 500px;
+  }
+}
+
 .DetailArt .History {
   padding: 250px 0px 50px 0px;
   color: white;
@@ -1468,6 +1590,10 @@ p {
   .DetailArt .History {
     width: 80%;
   }
+}
+
+.DetailArt .ExploreArt .TitreAndFilter {
+  position: relative;
 }
 
 .DetailArt .ExploreArt .TitreAndFilter h2 {
