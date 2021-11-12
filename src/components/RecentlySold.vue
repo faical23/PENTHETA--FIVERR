@@ -6,10 +6,14 @@
                 <div class="BtnSwitch">
                     <button @click="GetBack()"><svg   xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg></button>
                     <button  @click="GetNext()"><svg   xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg></button>
-                    <!-- <button  @click='ShowNewRecentlySold("Back")' :style="this.StartNumberRecentlySoldShow <= 0 ? 'background-color:transparent !important;border:1px solid #18E5E7' :''"><svg  :style="this.StartNumberRecentlySoldShow <= 0 ? 'fill:#18E5E7' :''" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg></button> -->
-                    <!-- <button  @click='ShowNewRecentlySold("Next")' :style="this.EndNumberRecentlySoldShow >= this.RecentlySold.length ? 'background-color:transparent !important;border:1px solid #18E5E7' :''" ><svg  :style="this.EndNumberRecentlySoldShow >= this.RecentlySold.length? 'fill:#18E5E7' :''"  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg></button> -->
                 </div>
             </div>
+            <div class="ZoneSpiner" v-if="SpinerWork">
+              <div class="spinner-border" role="status">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+
             <div class="RacebltySold__Content">
                 <div class="RacebltySold__Content_Single" v-for="Racently,n in RecentlySold.slice(StartNumberRecentlySoldShow,EndNumberRecentlySoldShow)" :key="n">
                         <div class="Centent" style="width:500px;padding:0px 20px;">
@@ -45,8 +49,9 @@ export default {
          
         ],
         StartNumberRecentlySoldShow:0,
-        EndNumberRecentlySoldShow:10,
+        EndNumberRecentlySoldShow:5,
         GetFirstRacently:5,
+        SpinerWork:false,
 
 
     }
@@ -75,18 +80,22 @@ export default {
         this.GetRecentySoldData(this.GetFirstRacently)
     },
     GetBack(){
-        this.GetFirstRacently -=5
-        this.StartNumberRecentlySoldShow -=5
-        this.EndNumberRecentlySoldShow -=5
-        this.GetRecentySoldData(this.GetFirstRacently)
-      console.log("back")
+      if(this.StartNumberRecentlySoldShow !== 0){
+          this.GetFirstRacently -=5
+          this.StartNumberRecentlySoldShow -=5
+          this.EndNumberRecentlySoldShow -=5
+          this.GetRecentySoldData(this.GetFirstRacently)
+      }
+
+      console.log(this.StartNumberRecentlySoldShow , this.EndNumberRecentlySoldShow )
     },
     GetRecentySoldData(Number){
+          this.SpinerWork = true
             axios
               .get(`${API_URL}nft/sold/recent/${Number}`)
               .then(response => {
                 this.RecentlySold = response.data
-                // console.log(response)
+                this.SpinerWork = false;
               })
     }
 

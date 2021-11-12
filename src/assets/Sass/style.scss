@@ -13,12 +13,13 @@
 @import "layout/navbar";
 @import "layout/footer";
 @import "layout/PopupFiter";
+@import 'layout/Spinner';
+@import "pages/home";
 
 // 5 - componenets;
 
 
 // 6 - Pages
-@import "pages/home";
 @import "pages/Explore";
 @import "pages/NTFs";
 @import "pages/DetailArt";

@@ -9,30 +9,26 @@
         </div>
         <div class="AboutUs">
             <ul>
-                <li><h6>About us</h6></li>
-                <li><router-link to="/"> About Us</router-link></li>
-                <li><router-link to="/"> Our Services</router-link></li>
-                <li><router-link to="/"> How It Works</router-link></li>
-                <li><router-link to="/"> Become a Partner</router-link></li>
+                <li><h6>Pages</h6></li>
+                <li><router-link to="/"> Home</router-link></li>
+                <li><router-link to="/Explore"> Explore</router-link></li>
+                <li><router-link to="/NTFs"> My NFTs</router-link></li>
+                <li><router-link to="/">Launchpad</router-link></li>
             </ul>
         </div>
         <div class="Comunity">
             <ul>
                 <li><h6>Community</h6></li>
-                <li><router-link to="/"> Token</router-link></li>
-                <li><router-link to="/"> Discussion</router-link></li>
-                <li><router-link to="/"> Voting</router-link></li>
-                <li><router-link to="/"> Blog</router-link></li>
                 <li><router-link to="/"> Help Center</router-link></li>
+                <li><router-link to="/"> Reddit</router-link></li>
             </ul>
 
         </div>
         <div class="SocielMedia">
             <ul>
                 <li><h6>Social Media</h6></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
+                <li><a href="#">Discord</a></li>
             </ul>
         </div>
       </div>

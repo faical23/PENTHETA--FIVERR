@@ -621,6 +621,29 @@ p {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .PopupFilter {
+    top: 170px;
+  }
+}
+
+.PopupFilterExplore {
+  position: relative;
+  margin: 0px auto;
+  width: 700px;
+  top: 0px;
+}
+
+.ZoneSpiner {
+  text-align: center;
+}
+
+.ZoneSpiner .spinner-border {
+  width: 5rem;
+  height: 5rem;
+  color: #18E5E7;
+}
+
 .home {
   background-color: #1C1C1C;
 }
@@ -822,7 +845,7 @@ p {
     text-align: start;
   }
   .home .Hero .container-fluid .BuyAndPrice h4 {
-    font-size: 25px !important;
+    font-size: 20px !important;
   }
 }
 
@@ -1107,15 +1130,30 @@ p {
     font-size: 20px !important;
     width: 100% !important;
   }
+  .home .ExploreArt .TitreAndFilter {
+    display: block !important;
+    text-align: center !important;
+    text-align: -moz-center !important;
+    text-align: -webkit-center !important;
+  }
   .home .ExploreArt .TitreAndFilter h2 {
-    font-size: 18px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 45px;
   }
   .home .ExploreArt .TitreAndFilter .Filter button {
-    padding: 6px 20px;
-    font-size: 13px;
+    padding: 10px 35px;
+    font-size: 16px;
   }
   .home .ExploreArt .TitreAndFilter .Filter button svg {
     fill: #18E5E7;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .home .ExploreArt .TitreAndFilter h2 {
+    font-size: 26px;
   }
 }
 
@@ -1336,6 +1374,190 @@ p {
   }
 }
 
+.ExploreArt {
+  padding: 0px 100px;
+}
+
+.ExploreArt .TitreAndFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0px;
+  position: relative;
+}
+
+.ExploreArt .TitreAndFilter h2 {
+  font-family: 'Montserrat-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  /* identical to box height, or 133% */
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: white;
+}
+
+.ExploreArt .TitreAndFilter .Filter button {
+  padding: 6px 35px;
+  background: transparent;
+  border-radius: 40px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+  border: 2px solid #18E5E7;
+  color: #18E5E7;
+}
+
+.ExploreArt .TitreAndFilter .Filter button svg {
+  fill: #18E5E7;
+}
+
+.ExploreArt .TitreAndFilter .Filter button:hover {
+  background-color: #18E5E7 !important;
+  color: #141516;
+}
+
+.ExploreArt .TitreAndFilter .Filter button:hover svg {
+  fill: black;
+}
+
+.ExploreArt .ExploreArt__Card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ExploreArt .ExploreArt__Card .Card {
+  cursor: pointer;
+  max-width: 350px;
+  padding: 20px 10px;
+  background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(80px);
+  position: relative;
+  margin: 20px;
+}
+
+.ExploreArt .ExploreArt__Card .Card .NFTImg {
+  height: 360px;
+  object-fit: cover;
+}
+
+.ExploreArt .ExploreArt__Card .Card .AvatarName {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.ExploreArt .ExploreArt__Card .Card .AvatarName img {
+  margin-right: 10px;
+}
+
+.ExploreArt .ExploreArt__Card .Card .AvatarName span {
+  color: white;
+}
+
+.ExploreArt .ExploreArt__Card .Card h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  text-transform: capitalize;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #18E5E7;
+  width: 100%;
+}
+
+.ExploreArt .ExploreArt__Card .Card .BuyAndPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  width: 90%;
+}
+
+.ExploreArt .ExploreArt__Card .Card .BuyAndPrice h6 {
+  padding-bottom: 5px;
+  color: white;
+}
+
+.ExploreArt .ExploreArt__Card .Card .BuyAndPrice h4 {
+  color: white;
+}
+
+.ExploreArt .ExploreArt__Card .Card .BuyAndPrice button {
+  padding: 6px 35px;
+  background: #18E5E7;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Montserrat-Bold';
+  font-size: 16px;
+}
+
+.ExploreArt .ExploreArt__Card .Card .BuyAndPrice button:hover {
+  background-color: transparent !important;
+  border: 1px solid #18E5E7;
+  color: #18E5E7;
+}
+
+@media screen and (max-width: 1024px) {
+  .ExploreArt {
+    padding: 50px 20px;
+  }
+  .ExploreArt .ExploreArt__Card h3 {
+    font-size: 25px;
+  }
+  .ExploreArt .ExploreArt__Card .BuyAndPrice {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .ExploreArt .Card {
+    padding: 10px 7px !important;
+  }
+  .ExploreArt .NFTImg {
+    height: 300px !important;
+    object-fit: cover;
+  }
+  .ExploreArt h3 {
+    font-size: 20px !important;
+    width: 100% !important;
+  }
+  .ExploreArt .TitreAndFilter {
+    display: block !important;
+    text-align: center !important;
+    text-align: -moz-center !important;
+    text-align: -webkit-center !important;
+  }
+  .ExploreArt .TitreAndFilter h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+  }
+  .ExploreArt .TitreAndFilter .Filter button {
+    padding: 10px 35px;
+    font-size: 16px;
+  }
+  .ExploreArt .TitreAndFilter .Filter button svg {
+    fill: #18E5E7;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .ExploreArt .TitreAndFilter h2 {
+    font-size: 26px;
+  }
+}
+
 .Explore .Hero .container-fluid .Hero__Content {
   width: 100%;
   display: block;
@@ -1432,12 +1654,12 @@ p {
 .DetailArt .Hero .container-fluid {
   padding: 100px 100px 0px 100px;
   position: relative;
-  top: 120px;
+  top: 100px;
 }
 
 .DetailArt .Hero .container-fluid .BigImg {
   width: 500px;
-  height: 700px;
+  height: 600px;
   border-bottom-right-radius: 30px;
   box-shadow: 1px 1px 0px 26px rgba(255, 255, 255, 0.2);
 }

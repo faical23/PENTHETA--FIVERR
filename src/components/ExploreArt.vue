@@ -48,7 +48,7 @@
     </div>
     <div class="ExploreArt__Card">
       <div v-for="(Explore, n) in ExploreArt" :key="n">
-        <div class="Card" >
+        <div class="Card">
           <img :src="Explore.imgUrl" alt="" class="NFTImg" @click="SwitchToDetailArt(Explore)" />
           <div class="AvatarName">
             <img

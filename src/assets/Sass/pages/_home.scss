@@ -185,7 +185,7 @@
                     padding:0px 10px;
                     text-align: start;
                     h4{
-                        font-size:25px !important;
+                        font-size:20px !important;
                     }
                 }
             }
@@ -452,18 +452,32 @@
                 width:100% !important;
             }
             .TitreAndFilter{
+                display: block !important;
+                text-align: center !important;
+                text-align: -moz-center !important;
+                text-align: -webkit-center !important;
                 h2{
-                font-size:18px
+                    font-size:35px;
+                    margin-bottom: 10px;
+                    text-align:center;
+                    line-height:45px;
                 }
 
                 .Filter{
                     button{
-                        padding: 6px 20px;
-                        font-size: 13px;
+                        padding: 10px 35px;
+                        font-size: 16px;
                         svg{
                             fill:$Primary-100;
                         }
                     }
+                }
+            }
+        }
+        @media screen and (max-width: 380px) {
+            .TitreAndFilter{
+                h2{
+                    font-size:26px;
                 }
             }
         }
@@ -679,4 +693,180 @@
         }
 
     }
+}
+
+.ExploreArt{
+    padding: 0px 100px;
+    .TitreAndFilter{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 0px;
+        position: relative;
+        h2{
+            font-family: 'Montserrat-Bold';
+
+            font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 64px;
+                /* identical to box height, or 133% */
+
+                text-transform: capitalize;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+            color: white;
+        }
+        .Filter{
+            button{
+                padding: 6px 35px;
+                background: transparent;
+                border-radius: 40px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 32px;
+                font-family: 'Montserrat-Bold';
+                font-size: 16px;
+                border: 2px solid $Primary-100;
+                color: $Primary-100;;
+                svg{
+                    fill:$Primary-100;
+                }
+                &:hover{
+                    background-color:$Primary-100 !important;
+                    color: $black;
+                    svg{
+                        fill:black;
+                    }
+                }
+            }
+        }
+    }
+    .ExploreArt__Card{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .Card{
+            cursor: pointer;
+            max-width: 350px;
+            padding: 20px 10px;
+            background: radial-gradient(209.87% 161.91% at 70.19% 100%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            backdrop-filter: blur(80px);
+            position: relative;
+            margin: 20px;
+            .NFTImg{
+                height:360px;
+                object-fit: cover;
+            }
+            .AvatarName{
+                padding: 20px 0px;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 10px;
+                }
+                span{
+                    color: white;
+                }
+            }
+            h3{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 19px;
+                line-height: 32px;
+                font-family: 'Montserrat-Bold';
+                text-transform: capitalize;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                color: #18E5E7;
+                width: 100%;
+            }
+                .BuyAndPrice{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 20px 0px;
+                    width:90%;
+                    h6{
+                        padding-bottom: 5px;
+                        color: white;
+                    }
+                    h4{
+                        color: white;
+                    }
+                    button{
+                        padding: 6px 35px;
+                        background: $Primary-100;
+                        border-radius: 8px;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 32px;
+                        font-family: 'Montserrat-Bold';
+                        font-size: 16px;
+                        &:hover{
+                            background-color:transparent !important;
+                            border: 1px solid $Primary-100;
+                            color: $Primary-100;
+                        }
+                    }
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 50px 20px;
+        .ExploreArt__Card{
+            h3{
+                font-size:25px ;
+            }
+            .BuyAndPrice{
+                width: 100% !important;
+
+            }
+        }
+
+    }
+    @media screen and (max-width: 560px) {
+        .Card{
+            padding: 10px 7px !important;
+        }
+        .NFTImg{
+            height:300px !important;
+            object-fit: cover;
+        }
+        h3{
+            font-size:20px !important;
+            width:100% !important;
+        }
+        .TitreAndFilter{
+            display: block !important;
+            text-align: center !important;
+            text-align: -moz-center !important;
+            text-align: -webkit-center !important;
+            h2{
+                font-size:35px;
+                margin-bottom: 10px;
+                text-align:center;
+                line-height:45px;
+            }
+
+            .Filter{
+                button{
+                    padding: 10px 35px;
+                    font-size: 16px;
+                    svg{
+                        fill:$Primary-100;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .TitreAndFilter{
+            h2{
+                font-size:26px;
+            }
+        }
+    }
+
 }

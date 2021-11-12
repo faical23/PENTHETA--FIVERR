@@ -7,7 +7,7 @@
               <li><router-link to="/Explore">Explore</router-link> </li>
               <!-- <li><router-link to="/DetailArt">Detail Art</router-link> </li> -->
               <li><router-link to="/NTFs">My NFTs</router-link> </li>
-              <button>Connect Wallet</button>
+              <button @click='ConnectWalletFunction()'>Connect Wallet</button>
             </ul>
       </div>
       <div class="container-fluid">
@@ -22,7 +22,7 @@
             </ul>
           </div>
           <div class="RightNavbar">
-              <button>Connect Wallet</button>
+              <button  @click='ConnectWalletFunction()'>Connect Wallet</button>
           </div>
         </div>
         <div  class="MobileNavbar">
@@ -60,6 +60,9 @@ export default {
     OpenNavbarMobile(){
       this.BurgerWork ? this.BurgerWork =  false : this.BurgerWork = true;
       console.log(this.BurgerWork)
+    },
+    ConnectWalletFunction(){
+      console.log("Connect wallet function")
     }
   },
   mounted() {

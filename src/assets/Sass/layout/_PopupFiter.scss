@@ -87,4 +87,13 @@
             height:100px !important;
         }
     }
+    @media screen and (max-width: 560px) {
+        top:170px;
+    }
+}
+.PopupFilterExplore{
+    position: relative;
+    margin: 0px auto;
+    width: 700px;
+    top: 0px;
 }
