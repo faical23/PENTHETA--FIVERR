@@ -20,7 +20,7 @@
           </div>
           <div class="Price">
             <h6>Price:</h6>
-            <h1>0.4435 ETH ($1.231)</h1>
+            <h2 class="PriceETH">0.4435 ETH ($1.231)</h2>
           </div>
           <button @click="BuyFunction()">Buy</button>
         </div>

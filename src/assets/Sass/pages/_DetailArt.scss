@@ -15,8 +15,9 @@
                 width: 50% ;
                 position: relative;
                 left: 50px;
-                h1{
+                .PriceETH{
                     width: 70% ;
+                    font-size: 35px ;
                 }
                 h6{
                     padding: 10px 0px !important;
@@ -93,6 +94,9 @@
         }
         @media screen and (max-width: 768px) 
         {
+            .PriceETH{
+                width: 100% !important;
+            }
             .container-fluid{
 
                 .BigImg{
@@ -101,6 +105,13 @@
                 }
             }
 
+        }
+        @media screen and (max-width: 560px) 
+        {
+            .PriceETH{
+                width: 100% !important;
+                font-size: 22px !important;
+            }
         }
     }
     .History{

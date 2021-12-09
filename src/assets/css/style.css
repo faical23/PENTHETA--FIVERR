@@ -1038,11 +1038,13 @@ p {
   backdrop-filter: blur(80px);
   position: relative;
   margin: 20px;
+  overflow: hidden;
 }
 
 .home .ExploreArt .ExploreArt__Card .Card .NFTImg {
   height: 360px;
   object-fit: cover;
+  width: 350px;
 }
 
 .home .ExploreArt .ExploreArt__Card .Card .AvatarName {
@@ -1121,9 +1123,11 @@ p {
 @media screen and (max-width: 560px) {
   .home .ExploreArt .Card {
     padding: 10px 7px !important;
+    margin: 20px 0px !important;
   }
   .home .ExploreArt .NFTImg {
     height: 300px !important;
+    width: 350px;
     object-fit: cover;
   }
   .home .ExploreArt h3 {
@@ -1152,6 +1156,9 @@ p {
 }
 
 @media screen and (max-width: 380px) {
+  .home .ExploreArt .Card h4 {
+    font-size: 17px;
+  }
   .home .ExploreArt .TitreAndFilter h2 {
     font-size: 26px;
   }
@@ -1587,7 +1594,7 @@ p {
 }
 
 .Explore .Hero .container-fluid .Hero__Content .SearchInput button {
-  padding: 15px 50px;
+  padding: 14px 49px;
   background: #18E5E7;
   border-radius: 8px;
   font-style: normal;
@@ -1597,6 +1604,7 @@ p {
   font-family: 'Montserrat-Bold';
   font-size: 16px;
   margin-left: 20px;
+  border: 1px solid #18E5E7;
 }
 
 .Explore .Hero .container-fluid .Hero__Content .SearchInput button:hover {
@@ -1670,8 +1678,9 @@ p {
   left: 50px;
 }
 
-.DetailArt .Hero .container-fluid .Hero__Content h1 {
+.DetailArt .Hero .container-fluid .Hero__Content .PriceETH {
   width: 70%;
+  font-size: 35px;
 }
 
 .DetailArt .Hero .container-fluid .Hero__Content h6 {
@@ -1746,9 +1755,19 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .DetailArt .Hero .PriceETH {
+    width: 100% !important;
+  }
   .DetailArt .Hero .container-fluid .BigImg {
     width: 300px !important;
     height: 500px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .DetailArt .Hero .PriceETH {
+    width: 100% !important;
+    font-size: 22px !important;
   }
 }
 

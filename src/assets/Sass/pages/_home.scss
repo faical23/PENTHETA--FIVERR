@@ -368,9 +368,11 @@
                 backdrop-filter: blur(80px);
                 position: relative;
                 margin: 20px;
+                overflow:hidden;
                 .NFTImg{
                     height:360px;
                     object-fit: cover;
+                    width:350px
                 }
                 .AvatarName{
                     padding: 20px 0px;
@@ -442,9 +444,12 @@
         @media screen and (max-width: 560px) {
             .Card{
                 padding: 10px 7px !important;
+                margin: 20px 0px !important;
+  
             }
             .NFTImg{
                 height:300px !important;
+                width:350px;
                 object-fit: cover;
             }
             h3{
@@ -475,6 +480,12 @@
             }
         }
         @media screen and (max-width: 380px) {
+            .Card{
+                h4{
+                    font-size:17px;
+                }
+            }
+
             .TitreAndFilter{
                 h2{
                     font-size:26px;
